@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "ioi-pi:mark_interacted_containers"
+    ],
+    "icon": {
+        "item": "minecraft:jigsaw"
+    },
+    "name": "Item on Item",
+    "description": " "
+}

@@ -1,0 +1,2240 @@
+{
+    "type": "origins:multiple",
+    "item_on_item": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:air"
+            }
+        },
+        "on_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:bread"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{CustomModelData:231249}"
+                }
+            ]
+        },
+        "on_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "entity_action": {
+                "type": "origins:and",
+                "actions": [   
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            ]   
+        }   
+    },  
+    "use_offhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "offhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }   
+            ]
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:bread"
+                        }
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:231249}"
+                    }
+                ]
+            }
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+        "cooldown": 5
+    },
+    "use_mainhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:light_blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lime_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:cyan_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:purple_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:blue_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:green_terracotta"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:bread"
+                        }
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:231249}"
+                    }
+                ]
+            }
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+        "cooldown": 5
+    }
+}

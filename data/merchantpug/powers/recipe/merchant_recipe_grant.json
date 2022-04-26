@@ -1,0 +1,14 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "recipe give MerchantPug merchantpug:emerald_bundle"
+    },
+    "condition": {
+        "type": "origins:command",
+        "command": "clear @s minecraft:emerald 0",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "interval": 1
+}

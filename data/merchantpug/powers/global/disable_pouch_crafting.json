@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_crafting",
+    "recipe": "merchantpug:emerald_bundle",
+    "result": {
+        "item": "minecraft:air"
+    },
+    "condition": {
+        "type": "origins:origin",
+        "origin": "merchantpug:merchant",
+        "layer": "origins-classes:class",
+        "inverted": true
+    }
+}

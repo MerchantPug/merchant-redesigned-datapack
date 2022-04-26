@@ -1,0 +1,33 @@
+{
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "say AAAA I've been cured!!!"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add merchant.villager_paired"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute store result score #temp merchantTraderXp run data get entity @s Xp"
+            },
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if score #temp merchantTraderXp matches 1..",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                "if_action": {
+                    "type": "origins:execute_command",
+                    "command": "function merchantpug:villager/transfer_scores/setup_villager_scores"
+                }
+            }
+        ]
+    }
+}

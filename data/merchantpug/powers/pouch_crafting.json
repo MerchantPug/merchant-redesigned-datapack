@@ -1,0 +1,20 @@
+{
+    "type": "origins:modify_crafting",
+    "recipe": "merchantpug:emerald_bundle",
+    "result": {
+        "item": "minecraft:knowledge_book",
+        "tag": "{CustomModelData:231245,display:{Name:'{\"text\":\"Emerald Pouch\",\"color\":\"white\",\"italic\":\"false\"}'}}"
+    },
+    "item_action": {
+        "type": "origins:modify",
+        "modifier": "merchantpug:default_emerald_pouch"
+    },
+    "name": "Placeholder",
+    "description": "You are able to craft an Emerald Pouch of which stores emeralds.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text":"§lCrafting Recipe§r\n \u1C30 \n\u1C29\u1C28\u1C29\n \u1C29 "
+        }
+    ]
+}

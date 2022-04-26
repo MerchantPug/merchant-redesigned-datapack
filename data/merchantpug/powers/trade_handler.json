@@ -1,0 +1,281 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:area_of_effect",
+        "radius": 6,
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:villager"
+                    }
+                },
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{Tags: ['merchant.villager_modified']}"
+                    },
+                    "inverted": true
+                },
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{VillagerData:{profession:\"minecraft:none\"}}"
+                    },
+                    "inverted": true
+                }
+            ]
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scoreboard players add @s merchantRandomisedTradeId 0"
+                    },
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:or",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:nbt",
+                                            "nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
+                                        },
+                                        {
+                                            "type": "origins:nbt",
+                                            "nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
+                                        },
+                                        {
+                                            "type": "origins:nbt",
+                                            "nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
+                                        }
+                                    ]
+                                },
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "say Placeholder for Armorer/Toolsmith/Weaponsmith"
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:nbt",
+                                    "nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
+                                },
+                                "action": {
+                                    "type": "origins:if_else_list",
+                                    "actions": [
+                                        {
+                                            "condition": {
+                                                "type": "origins:command",
+                                                "command": "scoreboard players get @s merchantRandomisedTradeId",
+                                                "compare_to": 0,
+                                                "comparison": "=="
+                                            },
+                                            "action": {
+                                                "type": "origins:choice",
+                                                "actions": [
+                                                    {
+                                                        "element": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Warm)\",\"italic\":false}'},CustomModelData:231248}}}"                
+                                                                },
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "scoreboard players set @s merchantRandomisedTradeId 1"
+                                                                },
+                                                                {
+                                                                    "type": "origins:delay",
+                                                                    "ticks": 1,
+                                                                    "action": {
+                                                                        "type": "origins:execute_command",
+                                                                        "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231248}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                                    }    
+                                                                }
+                                                            ]
+                                                        },
+                                                        "weight": 1
+                                                    },
+                                                    {
+                                                        "element": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Cool)\",\"italic\":false}'},CustomModelData:231249}}}"                
+                                                                },
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "scoreboard players set @s merchantRandomisedTradeId 2"
+                                                                },
+                                                                {
+                                                                    "type": "origins:delay",
+                                                                    "ticks": 1,
+                                                                    "action": {
+                                                                        "type": "origins:execute_command",
+                                                                        "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231249}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                                    }    
+                                                                }
+                                                            ]
+                                                        },
+                                                        "weight": 1
+                                                    },
+                                                    {
+                                                        "element": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Shades)\",\"italic\":false}'},CustomModelData:231250}}}"                
+                                                                },
+                                                                {
+                                                                    "type": "origins:execute_command",
+                                                                    "command": "scoreboard players set @s merchantRandomisedTradeId 3"
+                                                                },
+                                                                {
+                                                                    "type": "origins:delay",
+                                                                    "ticks": 1,
+                                                                    "action": {
+                                                                        "type": "origins:execute_command",
+                                                                        "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231250}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                                    }    
+                                                                }
+                                                            ]
+                                                        },
+                                                        "weight": 1
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:command",
+                                                "command": "scoreboard players get @s merchantRandomisedTradeId",
+                                                "compare_to": 1,
+                                                "comparison": "=="
+                                            },
+                                            "action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:execute_command",
+                                                        "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Warm)\",\"italic\":false}'},CustomModelData:231248}}}"                
+                                                    },
+                                                    {
+                                                        "type": "origins:delay",
+                                                        "ticks": 1,
+                                                        "action": {
+                                                            "type": "origins:execute_command",
+                                                            "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231248}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                        }    
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:command",
+                                                "command": "scoreboard players get @s merchantRandomisedTradeId",
+                                                "compare_to": 2,
+                                                "comparison": "=="
+                                            },
+                                            "action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:execute_command",
+                                                        "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Cool)\",\"italic\":false}'},CustomModelData:231249}}}"                
+                                                    },
+                                                    {
+                                                        "type": "origins:delay",
+                                                        "ticks": 1,
+                                                        "action": {
+                                                            "type": "origins:execute_command",
+                                                            "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231249}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                        }    
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:command",
+                                                "command": "scoreboard players get @s merchantRandomisedTradeId",
+                                                "compare_to": 3,
+                                                "comparison": "=="
+                                            },
+                                            "action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:execute_command",
+                                                        "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:\"minecraft:emerald\",Count:6b},sell:{id:\"minecraft:bread\",Count:1b,tag:{display:{Name:'{\"text\":\"Terracotta Bag (Shades)\",\"italic\":false}'},CustomModelData:231250}}}"                
+                                                    },
+                                                    {
+                                                        "type": "origins:delay",
+                                                        "ticks": 1,
+                                                        "action": {
+                                                            "type": "origins:execute_command",
+                                                            "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:231250}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                                        }    
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:nbt",
+                                    "nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:6,buy:{id:\"minecraft:emerald\",Count:1b},sell:{id:\"minecraft:bread\",Count:3b,tag:{display:{Name:'{\"text\":\"Burley\",\"italic\":false}'},CustomModelData:417651}}}"                
+                                        },
+                                        {
+                                            "type": "origins:delay",
+                                            "ticks": 1,
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "execute store result entity @s Offers.Recipes[{sell:{id:\"minecraft:bread\",tag:{CustomModelData:417651}}}].uses int 1 run scoreboard players get @s merchantTraderTradeAmount"
+                                            }    
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tag @s add merchant.villager_modified"
+                    }
+                ]
+            }
+        }
+    },
+    "interval": 1,
+    "condition": {
+        "type": "origins:health",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "name": "Charisma",
+    "description": "You gain exclusive deals from each type of villager."
+}

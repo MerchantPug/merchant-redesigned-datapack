@@ -1,0 +1,1 @@
+execute as @e[type=villager,nbt={Xp:0,Tags:["merchant.villager_modified"]}] unless data entity @s Brain.memories."minecraft:job_site".value.pos run function merchantpug:villager/remove_unique_trades

@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "#merchantpug:swords",
+        "#merchantpug:pickaxes",
+        "#merchantpug:axes",
+        "#merchantpug:shovels",
+        "#merchantpug:hoes",
+        "minecraft:shears"
+    ]
+}

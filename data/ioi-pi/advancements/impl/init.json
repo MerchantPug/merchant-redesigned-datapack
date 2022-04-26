@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "init": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "ioi-pi:impl/init"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "origins": [
+      "merchantpug:global"
+    ],
+    "auto_choose": true,
+    "hidden": true
+  }
