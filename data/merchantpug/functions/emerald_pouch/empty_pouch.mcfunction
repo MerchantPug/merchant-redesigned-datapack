@@ -7,6 +7,9 @@ scoreboard players set #zero constants 0
 scoreboard players set #stacksize constants 64
 execute store result score #temp depositedEmeralds run data get storage ioi-pi:output item.tag.merchant.emeralds
 
+#   Play sound if emeralds are above 0
+execute unless score #temp depositedEmeralds matches 0 run playsound minecraft:item.bundle.drop_contents player @e[type=minecraft:player,distance=..6] ~ ~ ~ 1.0 1.0
+
 #   Math Block
 scoreboard players operation #temp emeraldsToWithdraw = #temp depositedEmeralds
 scoreboard players operation #temp emeraldsToWithdraw -= #stacksize constants
@@ -35,7 +38,7 @@ execute if score #temp emeraldsToWithdraw matches 0 run data modify storage ioi-
 
 
 #  Set a sign's text for use with the tag.display.Lore NBT
-execute if score #temp emeralds matches ..254 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/","color":"green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"config"},"color":"green","italic": false}]'
+execute if score #temp emeralds < emeraldPouchMax config run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/","color":"green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"config"},"color":"green","italic": false}]'
 execute unless score #temp emeralds matches ..254 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"dark_green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "dark_green","italic": false},{"text":"/","color":"dark_green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"config"},"color":"dark_green","italic": false}]'
 
 #  Reset the lore value

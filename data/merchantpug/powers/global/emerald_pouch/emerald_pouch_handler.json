@@ -52,10 +52,6 @@
                     "command": "function #ioi-pi:api/selected_item/get"
                 },
                 {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:item.bundle.insert"
-                },
-                {
                     "type": "apoli:execute_command",
                     "command": "tag @s remove merchant.fill_pouch"
                 }
@@ -108,10 +104,6 @@
                 {
                     "type": "origins:execute_command",
                     "command": "function #ioi-pi:api/selected_item/get"
-                },
-                {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:item.bundle.drop_contents"
                 },
                 {
                     "type": "apoli:execute_command",

@@ -2,9 +2,12 @@ scoreboard objectives add emeralds dummy
 scoreboard objectives add addedEmeralds dummy
 
 execute store result score #temp emeralds run data get storage ioi-pi:output item.tag.merchant.emeralds
-execute store result score #temp addedEmeralds run clear @s minecraft:emerald{ioi-pi: {selected: 1b, extra: 1b}}
+execute if score #temp emeralds < emeraldPouchMax config store result score #temp addedEmeralds run clear @s minecraft:emerald{ioi-pi: {selected: 1b, extra: 1b}}
 
-function merchantpug:emerald_pouch/add_to_emeralds
+#   Play sound if emeralds are above 0
+execute if score #temp emeralds < emeraldPouchMax config run playsound minecraft:item.bundle.insert player @e[type=minecraft:player,distance=..6] ~ ~ ~ 1.0 1.0
+
+execute if score #temp emeralds < emeraldPouchMax config run function merchantpug:emerald_pouch/add_to_emeralds
 
 execute store result storage ioi-pi:output item.tag.merchant.emeralds int 1 run scoreboard players get #temp emeralds
 
