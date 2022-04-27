@@ -10,7 +10,7 @@
         "modifier": "merchantpug:default_emerald_pouch"
     },
     "name": "Placeholder",
-    "description": "You are able to craft an Emerald Pouch of which holds emeralds.",
+    "description": "You are able to craft an emerald pouch which holds emeralds.",
     "badges": [
         {
             "sprite": "origins:textures/gui/badge/info.png",
