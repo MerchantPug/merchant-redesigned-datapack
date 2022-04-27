@@ -1,0 +1,32 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/bread"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 417651
+            },
+            "model": "merchantpug:item/burley"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 231248
+            },
+            "model": "merchantpug:item/terracotta_bundle_warm"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 231249
+            },
+            "model": "merchantpug:item/terracotta_bundle_cool"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 231250
+            },
+            "model": "merchantpug:item/terracotta_bundle_shades"
+        }
+    ]
+}

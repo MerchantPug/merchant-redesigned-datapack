@@ -1,0 +1,20 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/knowledge_book"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 231245
+            },
+            "model": "merchantpug:item/emerald_bundle"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 231246
+            },
+            "model": "merchantpug:item/emerald_bundle_filled"
+        }
+    ]
+}
