@@ -6,12 +6,6 @@
     "overrides": [
         {
             "predicate": {
-                "custom_model_data": 417651
-            },
-            "model": "merchantpug:item/burley"
-        },
-        {
-            "predicate": {
                 "custom_model_data": 231248
             },
             "model": "merchantpug:item/terracotta_bundle_warm"
@@ -27,6 +21,12 @@
                 "custom_model_data": 231250
             },
             "model": "merchantpug:item/terracotta_bundle_shades"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 417651
+            },
+            "model": "merchantpug:item/burley"
         }
     ]
 }
