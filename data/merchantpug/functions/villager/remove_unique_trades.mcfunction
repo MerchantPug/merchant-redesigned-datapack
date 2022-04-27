@@ -1,3 +1,7 @@
+#  Villager check store
+scoreboard objectives add merchantIsFisherman dummy
+scoreboard objectives add merchantIsMason dummy
+
 #   Store Xp so it can check for it before storing uses of trades
 execute store result score @s merchantTraderXp run data get entity @s Xp
 
