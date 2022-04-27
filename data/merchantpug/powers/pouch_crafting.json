@@ -9,12 +9,12 @@
         "type": "origins:modify",
         "modifier": "merchantpug:default_emerald_pouch"
     },
-    "name": "Placeholder",
+    "name": "Money Bags",
     "description": "You are able to craft an emerald pouch which holds emeralds.",
     "badges": [
         {
             "sprite": "merchantpug:textures/gui/badge/recipe.png",
-            "text":"Crafting Recipe\n\uE05A\uF809\uF809\uF804\uE05D\n \n \uF803\uE05B \uF801\ue05C \uE05B \n \n     \uF801\uE05E \n \n"
+            "text":"Crafting Recipe             \n\uE05A\uF80B\uF80A\uF808\uE05D\n \n  \uF801\uE05B \uF801\ue05C \uE05B           \uF801\uE05F\n \n       \uF803\uE05E \n\n \n"
         }
     ]
 }

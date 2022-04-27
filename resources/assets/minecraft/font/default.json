@@ -4,8 +4,8 @@
             "type": "bitmap",
             "file": "merchantpug:font/recipe.png",
             "ascent": 9,
-            "height": 54.0,
-            "size": 54.0,
+            "height": 64.0,
+            "size": 128.0,
             "chars": [
                 "\uE05A"
             ]
@@ -13,7 +13,7 @@
         {
             "type": "bitmap",
             "file": "minecraft:item/leather.png",
-            "ascent": 10,
+            "ascent": 5,
             "height": 16.0,
             "size": 16.0,
             "chars": [
@@ -23,7 +23,7 @@
         {
             "type": "bitmap",
             "file": "minecraft:item/emerald.png",
-            "ascent": 10,
+            "ascent": 5,
             "height": 16.0,
             "size": 16.0,
             "chars": [
@@ -33,7 +33,7 @@
         {
             "type": "bitmap",
             "file": "minecraft:item/string.png",
-            "ascent": 8,
+            "ascent": 3,
             "height": 16.0,
             "size": 16.0,
             "chars": [
@@ -43,11 +43,21 @@
         {
             "type": "bitmap",
             "file": "minecraft:item/leather.png",
-            "ascent": 12,
+            "ascent": 7,
             "height": 16.0,
             "size": 16.0,
             "chars": [
                 "\uE05E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "merchantpug:item/emerald_bundle.png",
+            "ascent": 5,
+            "height": 16.0,
+            "size": 16.0,
+            "chars": [
+                "\uE05F"
             ]
         },
         {
