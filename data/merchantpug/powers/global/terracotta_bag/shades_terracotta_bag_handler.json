@@ -19,7 +19,7 @@
                 },
                 {
                     "type": "origins:nbt",
-                    "nbt": "{CustomModelData:231249}"
+                    "nbt": "{CustomModelData:231250}"
                 }
             ]
         },
@@ -29,7 +29,7 @@
         },
         "entity_action": {
             "type": "origins:execute_command",
-            "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_cool"
+            "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_shades"
         } 
     },  
     "use_offhand": {
@@ -46,7 +46,7 @@
                 },
                 { 
                     "type": "origins:execute_command",
-                    "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_cool"
+                    "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_shades"
                 }
             ]
         },
@@ -64,7 +64,7 @@
                     },
                     {
                         "type": "origins:nbt",
-                        "nbt": "{CustomModelData:231249}"
+                        "nbt": "{CustomModelData:231250}"
                     }
                 ]
             }
@@ -89,7 +89,7 @@
                 },
                 { 
                     "type": "origins:execute_command",
-                    "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_cool"
+                    "command": "/loot spawn ~ ~ ~ loot merchantpug:gameplay/terracotta_bag_shades"
                 }
             ]
         },
@@ -107,7 +107,7 @@
                     },
                     {
                         "type": "origins:nbt",
-                        "nbt": "{CustomModelData:231249}"
+                        "nbt": "{CustomModelData:231250}"
                     }
                 ]
             }

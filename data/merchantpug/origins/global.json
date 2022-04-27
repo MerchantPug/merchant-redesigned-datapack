@@ -5,6 +5,7 @@
         "merchantpug:global/prevent_unique_item_use",
 		"merchantpug:global/terracotta_bag/warm_terracotta_bag_handler",
 		"merchantpug:global/terracotta_bag/cool_terracotta_bag_handler",
+		"merchantpug:global/terracotta_bag/shades_terracotta_bag_handler",
 		"merchantpug:global/terracotta_bag/nullify_block_reach"
 	],
 	"icon": "minecraft:emerald",
