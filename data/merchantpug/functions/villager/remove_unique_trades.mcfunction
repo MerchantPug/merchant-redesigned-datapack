@@ -40,6 +40,3 @@ scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsFisherman
 
 power revoke @s merchantpug:transfer_villager_scores merchantpug:transfer_scores
-
-# Add tag to mark zombie villager as handled
-execute as @s[type=zombie_villager] run tag @s add merchant.zombie_trades_revoked

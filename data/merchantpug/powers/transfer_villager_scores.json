@@ -4,6 +4,7 @@
         "type": "origins:action_over_time",
         "entity_action": {
             "type": "origins:area_of_effect",
+            "radius": 4,
             "bientity_condition": {
                 "type": "origins:target_condition",
                 "condition": {
@@ -14,13 +15,8 @@
             "bientity_action": {
                 "type": "origins:actor_action",
                 "action": {
-                    "type": "origins:and",
-                    "actions": [
-                        {
-                            "type": "origins:execute_command",
-                            "command": "tag @s add merchant.villager_paired"
-                        }
-                    ]
+                    "type": "origins:execute_command",
+                    "command": "tag @s add merchant.villager_paired"
                 }
             }
         },
@@ -49,12 +45,6 @@
                                     "type": "origins:health",
                                     "compare_to": 0,
                                     "comparison": "=="
-                                },
-                                {
-                                    "type": "origins:command",
-                                    "command": "execute if score @e[type=marker,distance=..1,tag=merchant.villager_marker] merchantTraderXp matches 1..",
-                                    "comparison": ">",
-                                    "compare_to": 0
                                 }
                             ]
                         },

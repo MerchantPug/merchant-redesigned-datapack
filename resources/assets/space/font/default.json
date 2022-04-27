@@ -2,52 +2,101 @@
     "providers": [
         {
             "type": "bitmap",
-            "file": "merchantpug:font/recipe.png",
-            "ascent": 9,
-            "height": 54.0,
-            "size": 54.0,
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -6767,
             "chars": [
-                "\uE05A"
+                "-"
             ]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/leather.png",
-            "ascent": 10,
-            "height": 16.0,
-            "size": 16.0,
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -1,
             "chars": [
-                "\uE05B"
+                "9"
             ]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/emerald.png",
-            "ascent": 10,
-            "height": 16.0,
-            "size": 16.0,
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 2,
             "chars": [
-                "\uE05C"
+                "8"
             ]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/string.png",
-            "ascent": 8,
-            "height": 16.0,
-            "size": 16.0,
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 7,
             "chars": [
-                "\uE05D"
+                "7"
             ]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/leather.png",
-            "ascent": 12,
-            "height": 16.0,
-            "size": 16.0,
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 20,
             "chars": [
-                "\uE05E"
+                "6"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 54,
+            "chars": [
+                "5"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 143,
+            "chars": [
+                "4"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 376,
+            "chars": [
+                "3"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 986,
+            "chars": [
+                "2"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 2583,
+            "chars": [
+                "1"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -2,
+            "chars": [
+                "0"
             ]
         },
         {
