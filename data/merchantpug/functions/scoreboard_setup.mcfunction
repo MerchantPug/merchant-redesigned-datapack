@@ -7,6 +7,6 @@ scoreboard objectives add merchantRandomisedTradeId dummy
 
 # Config values
 # TODO
-scoreboard objectives add config dummy
-scoreboard players add emeraldPouchMax config 0
-execute if score emeraldPouchMax config matches 0 run scoreboard players set emeraldPouchMax config 256
+scoreboard objectives add merchantConfig dummy
+scoreboard players add emeraldPouchMax merchantConfig 0
+execute if score emeraldPouchMax merchantConfig matches 0 run scoreboard players set emeraldPouchMax merchantConfig 256
