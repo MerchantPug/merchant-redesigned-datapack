@@ -1,6 +1,6 @@
 #  Get the score of the current entity you're executing as
-execute as @e[type=minecraft:marker, tag=merchant.villager_paired, sort=nearest, limit=1] run scoreboard players operation #current merchantVillagerId = @s merchantVillagerId
-execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantRandomisedTradeId = #current merchantRandomisedTradeId run scoreboard players operation #current merchantVillagerId = @s merchantVillagerId
+execute as @e[type=minecraft:marker, tag=merchant.villager_paired, sort=nearest, limit=1] run scoreboard players operation @s merchantVillagerId = #current merchantVillagerId
+execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantRandomisedTradeId = #current merchantRandomisedTradeId
 tellraw @a {"score":{"name":"#current","objective":"merchantRandomisedTradeId"}}
 tellraw @a {"score":{"name":"#current","objective":"merchantVillagerId"}}
 
