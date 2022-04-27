@@ -10,5 +10,6 @@
         "comparison": ">",
         "compare_to": 0
     },
-    "interval": 1
+    "interval": 1,
+    "hidden": true
 }
