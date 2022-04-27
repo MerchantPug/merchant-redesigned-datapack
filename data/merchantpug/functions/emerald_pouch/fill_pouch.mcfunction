@@ -11,8 +11,8 @@ execute store result storage ioi-pi:output item.tag.merchant.emeralds int 1 run 
 data modify storage ioi-pi:output item.tag.CustomModelData set value 231246
 
 #  Set a sign's text for use with the tag.display.Lore NBT
-execute if score #temp emeralds matches ..254 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/256","color":"green","italic": false}]'
-execute unless score #temp emeralds matches ..254 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"dark_green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "dark_green","italic": false},{"text":"/256","color":"dark_green","italic": false}]'
+execute if score #temp emeralds < emeraldPouchMax config run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/","color":"green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"config"},"color":"green","italic": false}]'
+execute unless score #temp emeralds < emeraldPouchMax config run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"dark_green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "dark_green","italic": false},{"text":"/","color":"dark_green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"config"},"color":"dark_green","italic": false}]'
 
 #  Reset the lore value
 data modify storage ioi-pi:output item.tag.display.Lore set value []
