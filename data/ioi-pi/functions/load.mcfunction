@@ -12,9 +12,9 @@ scoreboard objectives add ioi-pi dummy
 
 
 #   Display a load/reload message
-execute unless score #loaded ioi-pi = #loaded ioi-pi run tellraw @a[tag = ioi-pi.debugger] {"text": "[+ Loaded \"Item on Item Programming Interface\" by eggohito]", "color": "green"}
+execute unless score #loaded ioi-pi = #loaded ioi-pi run tellraw @a[tag = ioi-pi.debugger] {"text": "[+ Loaded \"Item on Item - Programmable Interface\" by eggohito]", "color": "green"}
 
-execute if score #loaded ioi-pi = #loaded ioi-pi run tellraw @a[tag = ioi-pi.debugger] {"text": "[= Reloaded \"Item on Item Programming Interface\" by eggohito]", "color": "gold"}
+execute if score #loaded ioi-pi = #loaded ioi-pi run tellraw @a[tag = ioi-pi.debugger] {"text": "[= Reloaded \"Item on Item - Programmable Interface\" by eggohito]", "color": "gold"}
 
 scoreboard players set #loaded ioi-pi 1
 

@@ -1,1 +1,0 @@
-execute if entity @s[tag = merchant.fill_pouch] run function merchantpug:emerald_pouch/fill_pouch

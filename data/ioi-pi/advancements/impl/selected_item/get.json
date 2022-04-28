@@ -7,6 +7,18 @@
                     {
                         "nbt": "{ioi-pi: {selected: 1b}}"
                     }
+                ],
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags: [\"ioi-pi.player\"]}"
+                            }
+                        }
+                    }
                 ]
             }
         }

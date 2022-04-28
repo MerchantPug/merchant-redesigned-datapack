@@ -1,0 +1,200 @@
+{
+    "type": "origins:multiple",
+    "break_shears_upon_block_break": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 239,
+                        "ignore_unbreaking": true
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.item.break",
+                    "pitch": 1.4,
+                    "volume": 0.85
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.glass.break",
+                    "pitch": 1.3,
+                    "volume": 1.0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute anchored eyes positioned ^ ^ ^0.25 run particle minecraft:item minecraft:shears{CustomModelData:15641} ~ ~ ~ 0.25 0 0.25 0 5"
+                }
+            ]
+        },
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:dust_color_transition 0.8 0.8 0.0 1.0 0.6 0.6 0.0 ~ ~ ~ 0.25 0.25 0.25 2 20"
+        },
+        "only_when_harvested": false,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:shears"
+                        }
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:15641}"
+                    }
+                ]
+            }
+        }
+    },
+    "prevent_shear_use": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:shears"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{CustomModelData:15641}"
+                }
+            ]
+        }
+    },
+    "normal_reach_mainhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": false,
+            "distance": 3.0,
+            "shape_type": "collider",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:target_condition",
+                                    "condition": {
+                                        "type": "origins:entity_type",
+                                        "entity_type": "minecraft:zombie"
+                                    }
+                                },
+                                "action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:execute_command",
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/super_shears_3000/zombie"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:entity.sheep.shear"
+                        }
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:delay",
+                            "ticks": 3,
+                            "action": {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:block.honey_block.fall",
+                                "volume": 0.6
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "tag @s add merchant.sheared"
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "function merchantpug:golden_shears/golden_shears_durability_mainhand"
+                        }
+                    }
+                ]
+            },
+            "command_at_hit": "particle minecraft:dust_color_transition 0.8 0.8 0.0 1.0 0.6 0.6 0.0 ~ ~ ~ 0.5 0.5 0.5 2 30"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:shears"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:15641}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:raycast",
+                    "block": false,
+                    "distance": 3.0,
+                    "shape_type": "collider",
+                    "hit_bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:command",
+                                    "command": "execute unless entity @s[tag=merchant.sheared]",
+                                    "compare_to": 1,
+                                    "comparison": "=="
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach",
+                    "inverted": true
+                }
+            ]
+        },
+        "cooldown": 5,
+        "key": {
+            "key": "key.use"
+        }
+    }
+}

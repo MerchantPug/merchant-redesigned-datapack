@@ -1,0 +1,7 @@
+{
+    "values": [
+        "merchantpug:emerald_pouch/fill/check_fill_pouch",
+        "merchantpug:emerald_pouch/empty/check_empty_pouch",
+        "merchantpug:emerald_pouch/check_init"
+    ]
+}

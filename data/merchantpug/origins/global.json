@@ -2,6 +2,7 @@
 	"powers": [
 		"merchantpug:global/disable_pouch_crafting",
         "merchantpug:global/emerald_pouch/emerald_pouch_handler",
+        "merchantpug:global/golden_shears",
         "merchantpug:global/prevent_unique_item_use",
 		"merchantpug:global/terracotta_bag/warm_terracotta_bag_handler",
 		"merchantpug:global/terracotta_bag/cool_terracotta_bag_handler",
