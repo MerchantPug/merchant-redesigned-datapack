@@ -18,7 +18,7 @@ execute if score #broken newDamage matches 1 run playsound minecraft:block.glass
 execute if score #broken newDamage matches 1 anchored eyes positioned ^ ^ ^0.25 run particle minecraft:item minecraft:shears{CustomModelData:15641} ~ ~ ~ 0.25 0 0.25 0 5
 
 function ioi-pi:impl/modify_inventory/apply/mainhand
-execute if score #broken newDamage matches 1 run item replace entity MerchantPug weapon.mainhand with air
+execute if score #broken newDamage matches 1 run item replace entity @s weapon.mainhand with air
 
 #   Clean up
 function ioi-pi:impl/clear_shulker_box

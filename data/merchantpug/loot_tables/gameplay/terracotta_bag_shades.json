@@ -2,7 +2,7 @@
     "type": "minecraft:command",
     "pools": [
         {
-            "rolls": 12,
+            "rolls": 1,
             "entries": [
                 {
                     "type": "item",

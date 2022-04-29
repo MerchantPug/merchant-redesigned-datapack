@@ -4,6 +4,7 @@
         "merchantpug:villager/removal_checks/remove_if_workstation_broken",
         "merchantpug:villager/removal_checks/remove_if_no_merchant",
         "merchantpug:villager/removal_checks/remove_if_leveled_up",
-        "merchantpug:villager/transfer_scores/transfer_scores"
+        "merchantpug:villager/transfer_scores/transfer_scores",
+        "merchantpug:golden_shears/golden_shears_shear_state"
     ]
 }
