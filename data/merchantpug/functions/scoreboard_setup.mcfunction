@@ -1,4 +1,4 @@
-scoreboard objectives add merchantTraderTradeAmount dummy
+scoreboard objectives add merchantTraderTradeUses dummy
 scoreboard objectives add merchantTraderXp dummy
 
 scoreboard objectives add merchantTraderProfessionLevel dummy

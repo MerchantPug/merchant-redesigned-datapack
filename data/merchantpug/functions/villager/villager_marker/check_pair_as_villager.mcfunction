@@ -7,15 +7,20 @@ scoreboard players add @e[type=#merchantpug:villagers,tag=merchant.villager_pair
 execute as @e[type=#merchantpug:villagers,tag=merchant.villager_paired,scores={merchantVillagerId=0},limit=1] run scoreboard players add #max_id merchantVillagerId 1
 execute as @e[type=#merchantpug:villagers,tag=merchant.villager_paired,scores={merchantVillagerId=0},limit=1] run scoreboard players operation @s merchantVillagerId = #max_id merchantVillagerId
 
+#  Get the current entity's trade amount score
+execute as @e[type=minecraft:villager, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run function merchantpug:villager/store_trade_amount
+
 #  Get the score of the current entity you're executing as
 scoreboard players operation #current merchantVillagerId = @s merchantVillagerId
 scoreboard players operation #current merchantTraderXp = @s merchantTraderXp
 scoreboard players operation #current merchantRandomisedTradeId = @s merchantRandomisedTradeId
+scoreboard players operation #current merchantTraderTradeUses = @s merchantTraderTradeUses
 
 #  Check if any marker entities that has the `merchant.villager_paired` tag has the same score as the current entity you're executing as
 execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players add #matching merchantVillagerId 1
 execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantTraderXp = #current merchantTraderXp
 execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantRandomisedTradeId = #current merchantRandomisedTradeId
+execute as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantTraderTradeUses = #current merchantTraderTradeUses
 
 #  Teleport marker to entity with the same ID every tick.
 execute at @s as @e[type=minecraft:marker, tag=merchant.villager_paired] if score @s merchantVillagerId = #current merchantVillagerId run tp ~ ~ ~

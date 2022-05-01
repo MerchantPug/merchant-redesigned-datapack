@@ -1,10 +1,10 @@
 {
     "values": [
         "merchantpug:burley/burley",
-        "merchantpug:emerald_pouch/drop_emeralds/check_emerald_pouch_entities",
         "merchantpug:villager/removal_checks/remove_if_workstation_broken",
         "merchantpug:villager/removal_checks/remove_if_no_merchant",
         "merchantpug:villager/removal_checks/remove_if_leveled_up",
+        "merchantpug:villager/restock_merchant_trades",
         "merchantpug:villager/transfer_scores/transfer_scores",
         "merchantpug:golden_shears/golden_shears_shear_state"
     ]
