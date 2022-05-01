@@ -95,7 +95,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "/playsound minecraft:entity.fish.swim neutral @a ~ ~ ~ 0.8 1"
+                    "command": "playsound minecraft:entity.fish.swim neutral @a ~ ~ ~ 0.8 1"
                 },
                 {
                     "type": "origins:delay",

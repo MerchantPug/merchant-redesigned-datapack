@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{display:{Name:'{\"text\":\"Silver Ingot\",\"italic\":false}'}}"
+                        }
+                    ],
+                    "name": "minecraft:iron_ingot"
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:cod"
+                }
+            ]
+        }
+    ]
+}

@@ -54,7 +54,7 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:toolsmith"}}] run scorebo
 execute as @s[nbt={VillagerData:{profession:"minecraft:weaponsmith"}}] run scoreboard players set @s merchantIsSmith 1
 
 #   Add trade to villager
-execute if score @s merchantIsSmith matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:3,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Anvil Polish","italic":false}'},CustomModelData:156655}},priceMultiplier:0.08f}
+execute if score @s merchantIsSmith matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:3,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Anvil Polish","color":"white","italic":false}'},CustomModelData:156655}},priceMultiplier:0.08f}
 
 #   Add stored uses of trade to villager
 execute if score @s merchantIsSmith matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:156655}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
