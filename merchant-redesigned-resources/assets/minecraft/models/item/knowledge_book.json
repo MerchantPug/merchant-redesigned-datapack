@@ -6,6 +6,18 @@
     "overrides": [
         {
             "predicate": {
+                "custom_model_data": 15641
+            },
+            "model": "merchantpug:item/golden_shears"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 156655
+            },
+            "model": "merchantpug:item/anvil_polish"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 231245
             },
             "model": "merchantpug:item/emerald_bundle"

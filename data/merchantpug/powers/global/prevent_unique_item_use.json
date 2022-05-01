@@ -49,6 +49,14 @@
                         "conditions": [
                             {
                                 "type": "origins:nbt",
+                                "nbt": "{CustomModelData:15641}"
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            },
+                            {
+                                "type": "origins:nbt",
                                 "nbt": "{CustomModelData:231245}"
                             },
                             {
