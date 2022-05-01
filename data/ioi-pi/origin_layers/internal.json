@@ -1,8 +1,0 @@
-{
-    "origins": [
-        "ioi-pi:internal"
-    ],
-    "name": "Programming Interface",
-    "auto_choose": true,
-    "hidden": true
-}

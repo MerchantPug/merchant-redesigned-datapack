@@ -1,5 +1,6 @@
 {
+    "replace": false,
     "values": [
-        "#merchantpug:tick"
+        "merchantpug_tmo:villager/transfer_scores"
     ]
 }

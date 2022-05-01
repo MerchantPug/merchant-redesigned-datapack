@@ -1,0 +1,62 @@
+{
+    "type": "origins:multiple",
+    "set_scores": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 4,
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:origin",
+                            "origin": "toomanyorigins:undead",
+                            "layer": "origins:origin"
+                        }
+                    ]
+                }
+            },
+            "bientity_action": {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add merchant.villager_paired"
+                }
+            }
+        },
+        "interval": 1
+    },
+    "handler": {
+        "type": "origins:action_when_hit",
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "toomanyorigins:undead",
+                        "layer": "origins:origin"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:status_effect",
+                    "effect": "toomanyorigins:zombifying",
+                    "max_duration": 85
+                },
+                "if_action": {
+                    "type": "origins:execute_command",
+                    "command": "function merchantpug:villager/transfer_scores/setup_zombie_scores"
+                }
+            }
+        }
+    }
+}

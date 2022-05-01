@@ -1,0 +1,1 @@
+execute as @e[type=villager,nbt={Tags:["merchant.villager_modified"]}] run power grant @s merchantpug_tmo:transfer_villager_scores_tmo_compat merchantpug:transfer_scores_tmo

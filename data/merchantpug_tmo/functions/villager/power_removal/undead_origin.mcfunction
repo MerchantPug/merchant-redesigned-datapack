@@ -1,0 +1,1 @@
+power revoke @s merchantpug:transfer_villager_scores_tmo_compat merchantpug:transfer_scores

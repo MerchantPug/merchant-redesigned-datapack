@@ -1,1 +1,0 @@
-execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=#merchantpug:zombies,distance=..8] run scoreboard players set @s zombiesNearbyTicks 0

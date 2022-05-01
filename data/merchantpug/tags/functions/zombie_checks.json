@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-        "merchantpug:villager/villager_marker/zombie_checks/vanilla_zombie"
+        "merchantpug_tmo:villager/zombie_checks/undead_origin"
     ]
 }

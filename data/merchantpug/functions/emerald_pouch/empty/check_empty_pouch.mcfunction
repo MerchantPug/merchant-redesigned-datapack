@@ -1,3 +1,0 @@
-execute if score on_modify ioi-pi matches 1 if entity @s[tag = merchant.empty_pouch] if data storage ioi-pi:output {item:{id:"minecraft:knowledge_book",tag:{CustomModelData:231246}}} run function merchantpug:emerald_pouch/empty/empty_pouch_on_modify
-
-execute if score after_modifying ioi-pi matches 1 if entity @s[tag=merchant.empty_pouch] run function merchantpug:emerald_pouch/empty/empty_pouch_after_modify
