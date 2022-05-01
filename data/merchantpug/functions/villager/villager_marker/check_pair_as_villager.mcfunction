@@ -25,8 +25,7 @@ execute unless score #matching merchantVillagerId matches 1.. run function merch
 
 #  If the villager is no longer actively being chased by a zombie, remove the villager_paired tag from it
 execute as @s[type=villager,tag=merchant.villager_paired] run scoreboard players add @s zombiesNearbyTicks 1
-execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=#merchantpug:zombies,distance=..8] run scoreboard players set @s zombiesNearbyTicks 0
-execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=player,nbt={cardinal_components:{"origins:origin":{OriginLayers:[{Origin:"toomanyorigins:undead",Layer:"origins:origin"}]}}}] run scoreboard players set @s zombiesNearbyTicks 0
+execute as @s[type=villager,tag=merchant.villager_paired] at @s run function #merchantpug:zombie_checks
 
 execute as @s[type=villager,tag=merchant.villager_paired] at @s if score @s zombiesNearbyTicks matches 2.. run tag @s remove merchant.villager_paired
 

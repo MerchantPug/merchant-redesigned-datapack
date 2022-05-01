@@ -1,5 +1,4 @@
 execute as @e[type=villager,nbt={Tags:["merchant.villager_modified"]}] run power grant @s merchantpug:transfer_villager_scores merchantpug:transfer_scores
-execute as @e[type=villager,nbt={Tags:["merchant.villager_modified"]}] run power grant @s merchantpug:transfer_villager_scores_tmo_compat merchantpug:transfer_scores_tmo
 
 #  Execute as a Zombie Villager just before it converts into a villager
 execute as @e[type=zombie_villager,nbt={ConversionTime:1}] run function merchantpug:villager/transfer_scores/setup_villager_scores

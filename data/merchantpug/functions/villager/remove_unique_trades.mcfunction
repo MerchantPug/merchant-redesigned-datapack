@@ -39,9 +39,9 @@ tag @s remove merchant.villager_modified
 #   Reset randomised trade if the villager hasn't been locked
 execute if score @s merchantTraderXp matches 0 run scoreboard players reset @s merchantRandomisedTradeId
 
+#   Run power removal functions (default and any compatible functions)
+function #merchantpug:powers_to_remove
+
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsFisherman
-
-power revoke @s merchantpug:transfer_villager_scores merchantpug:transfer_scores
-power revoke @s merchantpug:transfer_villager_scores_tmo_compat merchantpug:transfer_scores
