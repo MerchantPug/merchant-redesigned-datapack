@@ -1,5 +1,6 @@
 #  Id System
 scoreboard objectives add merchantVillagerId dummy
+scoreboard objectives add zombiesNearbyTicks dummy
 
 scoreboard players add @e[type=#merchantpug:villagers,tag=merchant.villager_paired] merchantVillagerId 0
 
@@ -23,7 +24,11 @@ execute at @s as @e[type=minecraft:marker, tag=merchant.villager_paired] if scor
 execute unless score #matching merchantVillagerId matches 1.. run function merchantpug:villager/villager_marker/summon_pair
 
 #  If the villager is no longer actively being chased by a zombie, remove the villager_paired tag from it
-execute as @s[type=villager,tag=merchant.villager_paired] at @s unless entity @e[type=#merchantpug:zombies,distance=..8] run tag @s remove merchant.villager_paired
+execute as @s[type=villager,tag=merchant.villager_paired] run scoreboard players add @s zombiesNearbyTicks 1
+execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=#merchantpug:zombies,distance=..8] run scoreboard players set @s zombiesNearbyTicks 0
+execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=player,nbt={cardinal_components:{"origins:origin":{OriginLayers:[{Origin:"toomanyorigins:undead",Layer:"origins:origin"}]}}}] run scoreboard players set @s zombiesNearbyTicks 0
+
+execute as @s[type=villager,tag=merchant.villager_paired] at @s if score @s zombiesNearbyTicks matches 2.. run tag @s remove merchant.villager_paired
 
 #  Do some clean up
 scoreboard players reset #matching merchantVillagerId

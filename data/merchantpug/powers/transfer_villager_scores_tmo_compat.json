@@ -8,8 +8,14 @@
             "bientity_condition": {
                 "type": "origins:target_condition",
                 "condition": {
-                    "type": "origins:in_tag",
-                    "tag": "merchantpug:zombies"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:origin",
+                            "origin": "toomanyorigins:undead",
+                            "layer": "origins:origin"
+                        }
+                    ]
                 }
             },
             "bientity_action": {
@@ -27,8 +33,14 @@
         "bientity_condition": {
             "type": "origins:actor_condition",
             "condition": {
-                "type": "origins:in_tag",
-                "tag": "merchantpug:zombies"
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "toomanyorigins:undead",
+                        "layer": "origins:origin"
+                    }
+                ]
             }
         },
         "bientity_action": {
@@ -36,9 +48,9 @@
             "action": {
                 "type": "origins:if_else",
                 "condition": {
-                    "type": "origins:health",
-                    "compare_to": 0,
-                    "comparison": "=="
+                    "type": "origins:status_effect",
+                    "effect": "toomanyorigins:zombifying",
+                    "max_duration": 85
                 },
                 "if_action": {
                     "type": "origins:execute_command",

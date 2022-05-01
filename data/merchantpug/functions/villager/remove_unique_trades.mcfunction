@@ -44,3 +44,4 @@ scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsFisherman
 
 power revoke @s merchantpug:transfer_villager_scores merchantpug:transfer_scores
+power revoke @s merchantpug:transfer_villager_scores_tmo_compat merchantpug:transfer_scores
