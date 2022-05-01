@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/after_modifying
 #
+#   > Call this function after modifying the selected item(s)
+#
 #@within function ioi-pi:impl/selected_item/get/**
 
 

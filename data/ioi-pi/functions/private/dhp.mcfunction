@@ -17,6 +17,21 @@
 #declare score_holder $impl.modify_inventory.elements
 
 
+#>  Determines if the function is called by the advancement
+#@within ioi-ipi:impl/selected_item/**
+#declare score_holder #impl.selected_item.inaccessible
+
+
+#>  Determines if the library is currently modifying the selected item(s)
+#@public
+#declare score_holder on_modify
+
+
+#>  Determines if the library has finished modifying the selected item(s)
+#@public
+#declare score_holder after_modifying
+
+
 #>  A storage for processing the inventory/items of an entity/block entity
 #@internal
 #declare storage ioi-pi:temp
@@ -28,5 +43,5 @@
 
 
 #>  A special shulker box used for indirectly modifying the player/entity's inventory
-#@internal
+#@public
 #alias vector "MinecraftPhi's yellow shulker box" -30000000 0 1602

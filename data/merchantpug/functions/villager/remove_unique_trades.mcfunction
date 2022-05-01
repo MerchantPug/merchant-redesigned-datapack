@@ -1,4 +1,4 @@
-#  Villager check store
+#  Store objectives for profession checks
 scoreboard objectives add merchantIsFisherman dummy
 scoreboard objectives add merchantIsMason dummy
 
@@ -37,7 +37,7 @@ execute if score @s merchantIsFisherman matches 1 run data remove entity @s Offe
 tag @s remove merchant.villager_modified
 
 #   Reset randomised trade if the villager hasn't been locked
-execute if score @s merchantTraderXp matches 0 run scoreboard players set @s merchantRandomisedTradeId 0
+execute if score @s merchantTraderXp matches 0 run scoreboard players reset @s merchantRandomisedTradeId
 
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsMason

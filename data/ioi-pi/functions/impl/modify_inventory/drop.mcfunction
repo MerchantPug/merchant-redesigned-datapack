@@ -1,6 +1,6 @@
 #> ioi-pi:impl/modify_inventory/drop
 #
-#   > Drop the contents of the yellow shulker box
+#   > Drop the contents of the yellow shulker box located in `-30000000 0 1602`
 #
 #@internal
 

@@ -7,6 +7,6 @@
 
 data modify storage ioi-pi:output item set from storage ioi-pi:output items.1[-1]
 
-execute unless score #impl.adv.call ioi-pi = #impl.adv.call ioi-pi as @a[tag = ioi-pi.player] run function ioi-pi:impl/selected_item/on_modify
+execute unless score #impl.selected_item.inaccessible ioi-pi = #impl.selected_item.inaccessible ioi-pi as @a[tag = ioi-pi.player] run function ioi-pi:impl/selected_item/on_modify
 
 data modify storage ioi-pi:output items.1[-1] set from storage ioi-pi:output item

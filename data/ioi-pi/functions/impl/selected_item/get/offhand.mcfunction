@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/offhand
 #
+#   > Get the selected item from the offhand slot of the player
+#
 #@within function ioi-pi:impl/selected_item/get
 
 

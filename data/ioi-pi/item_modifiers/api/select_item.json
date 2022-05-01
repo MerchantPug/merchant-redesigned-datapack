@@ -1,6 +1,6 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{ioi-pi: {selected: 1b}}"
+        "tag": "{ioi-pi: {selected: 1b, extra: 0b, result_item: 0b}}"
     }
 ]

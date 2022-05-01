@@ -2,7 +2,7 @@
 #
 #   > Modify the `offhand` section of the `ioi-pi:temp` storage
 #
-#@within function ioi-pi:impl/selected_item/get/offhand/process
+#@within function ioi-pi:impl/selected_item/get/offhand
 
 
 data modify storage ioi-pi:temp temp.items set from block -30000000 0 1602 Items
@@ -19,4 +19,4 @@ function ioi-pi:impl/modify_inventory/apply/offhand
 #   Do some clean up before calling the `ioi-pi:impl/selected_item/after_modifying` function
 function ioi-pi:impl/selected_item/clean_up
 
-function ioi-pi:impl/selected_item/after_modifying
+execute unless score #impl.selected_item.inaccessible ioi-pi = #impl.selected_item.inaccessible ioi-pi run function ioi-pi:impl/selected_item/after_modifying

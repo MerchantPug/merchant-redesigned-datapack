@@ -1,11 +1,33 @@
 {
     "criteria": {
-        "inventory_changed": {
+        "from_inaccessible_slot": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{ioi-pi: {selected: 1b}}"
+                        "nbt": "{ioi-pi: {selected: 1b, result_item: 0b}}"
+                    }
+                ],
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags: [\"ioi-pi.player\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "from_recipe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{ioi-pi: {selected: 1b, result_item: 1b}}"
                     }
                 ],
                 "player": [
@@ -23,6 +45,12 @@
             }
         }
     },
+    "requirements": [
+        [
+            "from_inaccessible_slot",
+            "from_recipe"
+        ]
+    ],
     "rewards": {
         "function": "ioi-pi:impl/selected_item/get"
     }

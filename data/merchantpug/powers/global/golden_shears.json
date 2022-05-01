@@ -100,7 +100,7 @@
                                     "type": "origins:target_action",
                                     "action": {
                                         "type": "origins:execute_command",
-                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/super_shears_3000/zombie"
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombie"
                                     }
                                 }
                             }

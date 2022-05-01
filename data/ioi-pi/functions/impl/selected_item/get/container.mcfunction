@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/container
 #
+#   > Get the selected item from nearby containers
+#
 #@within function ioi-pi:impl/selected_item/get
 
 

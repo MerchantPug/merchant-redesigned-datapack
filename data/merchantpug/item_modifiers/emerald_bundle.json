@@ -1,0 +1,6 @@
+[
+    {
+        "function": "set_nbt",
+        "tag": "{merchant:{init: 1b}}"
+    }
+]

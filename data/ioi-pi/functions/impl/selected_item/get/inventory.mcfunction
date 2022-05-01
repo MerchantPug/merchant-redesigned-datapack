@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/inventory
 #
+#   > Get the selected item from the inventory slots of the player
+#
 #@within function ioi-pi:impl/selected_item/get
 
 

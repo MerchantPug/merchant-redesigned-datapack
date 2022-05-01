@@ -1,6 +1,7 @@
 {
     "values": [
         "merchantpug:burley/burley",
+        "merchantpug:emerald_pouch/drop_emeralds/check_emerald_pouch_entities",
         "merchantpug:villager/removal_checks/remove_if_workstation_broken",
         "merchantpug:villager/removal_checks/remove_if_no_merchant",
         "merchantpug:villager/removal_checks/remove_if_leveled_up",

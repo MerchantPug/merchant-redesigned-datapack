@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/armor
 #
+#   > Get the selected item from the armor slots of the player
+#
 #@within function ioi-pi:impl/selected_item/get
 
 

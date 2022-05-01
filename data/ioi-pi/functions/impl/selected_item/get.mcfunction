@@ -1,12 +1,14 @@
 #> ioi-pi:impl/selected_item/get
 #
+#   > Get the selected item from the player's inventory, from nearby container blocks and from nearby entities that has an inventory
+#
 #@within
 #   advancement ioi-pi:impl/selected_item/get
 #   tag/function ioi-pi:api/selected_item/get
 
 
-#   Set the score of the `#impl.adv.call` score holder to 1
-execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = true}] run scoreboard players set #impl.adv.call ioi-pi 1
+#   Determine if the selected item cannot be accessed via NBT
+execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = {from_inaccessible_slot = true, from_recipe = false}}] run scoreboard players set #impl.selected_item.inaccessible ioi-pi 1
 
 
 #   Add a tag to refer to the player in some context where the executor has to be changed
@@ -35,9 +37,9 @@ tag @s remove ioi-pi.player
 
 scoreboard players reset on_modify ioi-pi
 
-scoreboard players reset #impl.adv.call ioi-pi
-
 scoreboard players reset after_modifying ioi-pi
+
+scoreboard players reset #impl.selected_item.inaccessible ioi-pi
 
 
 data remove storage ioi-pi:temp temp

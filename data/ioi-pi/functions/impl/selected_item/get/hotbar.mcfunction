@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/hotbar
 #
+#   > Get the selected item from the hotbar slots of the player
+#
 #@within function ioi-pi:impl/selected_item/get
 
 

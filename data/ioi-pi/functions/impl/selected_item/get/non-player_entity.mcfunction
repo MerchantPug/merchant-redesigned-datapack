@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get/non-player_entity
 #
+#   > Get the selected item from the inventory of the non-player entity that has one
+#
 #@within function ioi-pi:impl/selected_item/get
 
 
