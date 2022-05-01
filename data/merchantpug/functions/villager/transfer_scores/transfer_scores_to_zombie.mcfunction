@@ -7,9 +7,6 @@ execute as @e[type=marker,tag=merchant.villager_paired] if score @s markerTime =
 
 execute as @e[type=marker,tag=merchant.villager_paired] if score @s markerTime = #current_gametime markerTime at @s as @e[type=zombie_villager,sort=nearest,limit=1] run scoreboard players operation @s merchantVillagerId = #current merchantVillagerId
 
-tellraw @a {"score":{"name": "#current","objective": "merchantVillagerId"}}
-execute as @e[type=marker,tag=merchant.villager_paired] if score @s markerTime = #current_gametime markerTime at @s as @e[type=zombie_villager,sort=nearest,limit=1] run tellraw @a {"score":{"name": "@s","objective": "merchantVillagerId"}}
-
 execute as @e[type=minecraft:zombie_villager] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantRandomisedTradeId = #current merchantRandomisedTradeId
 
 execute as @e[type=minecraft:zombie_villager] if score @s merchantVillagerId = #current merchantVillagerId run function merchantpug:villager/remove_unique_trades

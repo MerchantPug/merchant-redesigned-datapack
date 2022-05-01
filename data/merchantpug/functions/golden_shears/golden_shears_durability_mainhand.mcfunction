@@ -3,10 +3,8 @@ scoreboard objectives add newDamage dummy
 function ioi-pi:impl/modify_inventory/setup/mainhand
 
 execute store result score #temp newDamage run data get block -30000000 0 1602 Items[{id:"minecraft:shears",tag:{CustomModelData:15641}}].tag.merchant.damage
-tellraw @a {"score":{"name": "#temp","objective": "newDamage"}}
 
 scoreboard players add #temp newDamage 1
-tellraw @a {"score":{"name": "#temp","objective": "newDamage"}}
 
 execute store result block -30000000 0 1602 Items[{id:"minecraft:shears",tag:{CustomModelData:15641}}].tag.merchant.damage int 1 run scoreboard players get #temp newDamage
 
