@@ -1,1 +1,1 @@
-execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @e[type=player,nbt={cardinal_components:{"origins:origin":{OriginLayers:[{Origin:"toomanyorigins:undead",Layer:"origins:origin"}]}}}] run scoreboard players set @s zombiesNearbyTicks 0
+execute as @s[type=villager,tag=merchant.villager_paired] at @s if entity @a[nbt={cardinal_components:{"origins:origin":{OriginLayers:[{Origin:"toomanyorigins:undead",Layer:"origins:origin"}]}}}] run scoreboard players set @s zombiesNearbyTicks 0
