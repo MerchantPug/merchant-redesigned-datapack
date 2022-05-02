@@ -1,145 +1,1641 @@
 {
-    "type": "origins:action_on_block_use",
-    "block_action": {
-        "type": "origins:and",
-        "actions": [
-            {
-                "type": "origins:if_else_list",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "set_resource": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "change": 10,
+            "operation": "set",
+            "resource": "*:*_resource"
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "interval": 1
+    },
+    "tick_down_resource": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "change": -1,
+            "operation": "add",
+            "resource": "*:*_resource"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "interval": 2
+    },
+    "prevent_anvil_use": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:anvil"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:chipped_anvil"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:damaged_anvil"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "compare_to": 0,
+                    "comparison": ">"
+                }
+            ]
+        }
+    },
+    "normal_reach_mainhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 4.5,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "hit_action": {
+                "type": "origins:equipped_item_action",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                },
+                "equipment_slot": "mainhand"
+            },
+            "block_action": {
+                "type": "origins:and",
                 "actions": [
                     {
-                        "condition": {
-                            "type": "origins:block_state",
-                            "property": "facing",
-                            "enum": "north"
-                        },
-                        "action": {
-                            "type": "origins:and",
-                            "actions": [
-                                {
-                                    "type": "origins:set_block",
-                                    "block": "minecraft:anvil"
-                                },
-                                {
-                                    "type": "origins:modify_block_state",
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
                                     "property": "facing",
                                     "enum": "north"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "condition": {
-                            "type": "origins:block_state",
-                            "property": "facing",
-                            "enum": "west"
-                        },
-                        "action": {
-                            "type": "origins:and",
-                            "actions": [
-                                {
-                                    "type": "origins:set_block",
-                                    "block": "minecraft:anvil"
                                 },
-                                {
-                                    "type": "origins:modify_block_state",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
                                     "property": "facing",
                                     "enum": "west"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "condition": {
-                            "type": "origins:block_state",
-                            "property": "facing",
-                            "enum": "east"
-                        },
-                        "action": {
-                            "type": "origins:and",
-                            "actions": [
-                                {
-                                    "type": "origins:set_block",
-                                    "block": "minecraft:anvil"
                                 },
-                                {
-                                    "type": "origins:modify_block_state",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
                                     "property": "facing",
                                     "enum": "east"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "condition": {
-                            "type": "origins:block_state",
-                            "property": "facing",
-                            "enum": "south"
-                        },
-                        "action": {
-                            "type": "origins:and",
-                            "actions": [
-                                {
-                                    "type": "origins:set_block",
-                                    "block": "minecraft:anvil"
                                 },
-                                {
-                                    "type": "origins:modify_block_state",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
                                     "property": "facing",
                                     "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
                                 }
-                            ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
                         }
                     }
                 ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 4.5,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach",
+                    "inverted": true
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
+    },
+    "normal_reach_offhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 4.5,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_condition": {
+                "type": "origins:actor_condition",
+                "condition": {
+                    "type": "origins:raycast",
+                    "distance": 4.5,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                }
             },
-            {
-                "type": "origins:execute_command",
-                "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
-            },
-            {
-                "type": "origins:execute_command",
-                "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
-            },
-            {
-                "type": "origins:delay",
-                "ticks": 2,
+            "hit_action": {
+                "type": "origins:equipped_item_action",
                 "action": {
-                    "type": "origins:execute_command",
-                    "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
-                }
-            }
-        ]
-    },
-    "block_condition": {
-        "type": "origins:or",
-        "conditions": [
-            {
-                "type": "origins:block",
-                "block": "minecraft:chipped_anvil"
+                    "type": "origins:consume",
+                    "amount": 1
+                },
+                "equipment_slot": "offhand"
             },
-            {
-                "type": "origins:block",
-                "block": "minecraft:damaged_anvil"
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
             }
-        ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 4.5,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach",
+                    "inverted": true
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
     },
-    "held_item_action": {
-        "type": "origins:consume",
-        "amount": 1
+    "normal_reach_mainhand_creative": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 5.0,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 5.0,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach",
+                    "inverted": true
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
     },
-    "item_condition": {
-        "type": "origins:and",
-        "conditions": [
-            {
-                "type": "origins:ingredient",
-                "ingredient": {
-                    "item": "minecraft:knowledge_book"
+    "normal_reach_offhand_creative": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 5.0,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 5.0,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach",
+                    "inverted": true
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
+    },
+    "enderian_reach_mainhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 6.0,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_condition": {
+                "type": "origins:actor_condition",
+                "condition": {
+                    "type": "origins:raycast",
+                    "distance": 6.0,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
                 }
             },
-            {
-                "type": "origins:nbt",
-                "nbt": "{CustomModelData:156655}"
+            "hit_action": {
+                "type": "origins:equipped_item_action",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                },
+                "equipment_slot": "mainhand"
+            },
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
             }
-        ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 6.0,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach"
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
+    },
+    "enderian_reach_offhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 6.0,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "hit_action": {
+                "type": "origins:equipped_item_action",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                },
+                "equipment_slot": "offhand"
+            },
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 6.0,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach"
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
+    },
+    "enderian_reach_mainhand_creative": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 6.5,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 6.5,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach"
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
+    },
+    "enderian_reach_offhand_creative": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": true,
+            "entity": false,
+            "distance": 6.5,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "block_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "north"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "north"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "west"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "west"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "east"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "east"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:block_state",
+                                    "property": "facing",
+                                    "enum": "south"
+                                },
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:set_block",
+                                            "block": "minecraft:anvil"
+                                        },
+                                        {
+                                            "type": "origins:modify_block_state",
+                                            "property": "facing",
+                                            "enum": "south"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:dust 1.0 1.0 1.0 1.0 ~ ~0.5 ~ 0.25 0 0.25 0 8"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:item.honeycomb.wax_on block @a ~ ~ ~ 1.0 2.0"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "ticks": 2,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "playsound minecraft:block.anvil.use block @a ~ ~ ~ 0.4 0.65"
+                        }
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 6.5,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:chipped_anvil"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:knowledge_book"
+                                }
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:156655}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "origins:extra_reach"
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "cooldown": 1
     }
 }

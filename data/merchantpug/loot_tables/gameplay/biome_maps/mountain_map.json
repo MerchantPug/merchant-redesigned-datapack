@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "functions": [
+                        {
+                            "function": "exploration_map",
+                            "search_radius": 201,
+                            "destination": "merchantpug:mountain_marker",
+                            "decoration": "target_point",
+                            "zoom": 1,
+                            "skip_existing_chunks": false
+                        },
+                        {
+                            "function": "set_name",
+                            "name": "Mountain Traveler Map"
+                        }
+                    ],
+                    "name": "minecraft:map"
+                }
+            ]
+        }
+    ]
+}

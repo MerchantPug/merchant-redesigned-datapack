@@ -29,41 +29,12 @@
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:choice",
-                    "actions": [
-                        {
-                            "element": {
-                                "type": "origins:execute_command",
-                                "command": "summon minecraft:item ~ ~0.1 ~ {Item:{id:\"minecraft:cod\",Count:1b},PickupDelay:0,Tags:[\"merchant.burley_fish\"]}"
-                            },
-                            "weight": 60
-                        },
-                        {
-                            "element": {
-                                "type": "origins:execute_command",
-                                "command": "summon minecraft:item ~ ~0.1 ~ {Item:{id:\"minecraft:salmon\",Count:1b},PickupDelay:0,Tags:[\"merchant.burley_fish\"]}"
-                            },
-                            "weight": 25
-                        },
-                        {
-                            "element": {
-                                "type": "origins:execute_command",
-                                "command": "summon minecraft:item ~ ~0.1 ~ {Item:{id:\"minecraft:pufferfish\",Count:1b},PickupDelay:0,Tags:[\"merchant.burley_fish\"]}"
-                            },
-                            "weight": 13
-                        },
-                        {
-                            "element": {
-                                "type": "origins:execute_command",
-                                "command": "summon minecraft:item ~ ~0.1 ~ {Item:{id:\"minecraft:tropical_fish\",Count:1b},PickupDelay:0,Tags:[\"merchant.burley_fish\"]}"
-                            },
-                            "weight": 2
-                        }
-                    ]
+                    "type": "origins:execute_command",
+                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/burley"
                 },
                 {
                     "type": "origins:area_of_effect",
-                    "radius": 0.2,
+                    "radius": 0.1,
                     "bientity_action": {
                         "type": "origins:target_action",
                         "action": {
@@ -75,17 +46,8 @@
                     "bientity_condition": {
                         "type": "origins:target_condition",
                         "condition": {
-                            "type": "origins:and",
-                            "conditions": [
-                                {
-                                    "type": "origins:entity_type",
-                                    "entity_type": "minecraft:item"
-                                },
-                                {
-                                    "type": "origins:nbt",
-                                    "nbt": "{Tags: [\"merchant.burley_fish\"]}"
-                                }
-                            ]
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:item"
                         }
                     }
                 },
