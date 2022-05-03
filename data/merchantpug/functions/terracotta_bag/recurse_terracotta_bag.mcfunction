@@ -5,7 +5,7 @@ function ioi-pi:impl/clear_shulker_box
 execute store result score #inventory_elements giveTerracotta if data entity @s Inventory[]
 
 
-#   Get the sum of `#inventory_elements` and `#eyes_elements` score holders to determine if the Ender Eyes should be spawned or given
+#   Get the sum of `#inventory_elements` and `#eyes_elements` score holders to determine if the Terracotta should be spawned or given
 execute store result score #total_elements giveTerracotta run scoreboard players add #inventory_elements giveTerracotta 1
 
 #   Prepare the Terracotta items in the shulker box

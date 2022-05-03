@@ -1,6 +1,7 @@
 #  Store objectives for profession checks
 scoreboard objectives add merchantIsCartographer dummy
 scoreboard objectives add merchantIsFisherman dummy
+scoreboard objectives add merchantIsLeatherworker dummy
 scoreboard objectives add merchantIsMason dummy
 scoreboard objectives add merchantIsShepherd dummy
 scoreboard objectives add merchantIsSmith dummy
@@ -46,6 +47,18 @@ execute if score @s merchantIsFisherman matches 1 run data modify entity @s Offe
 
 #   Add stored uses of trade to villager
 execute if score @s merchantIsFisherman matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:417651}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+
+#   LEATHERWORKER
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:leatherworker"}}] run scoreboard players set @s merchantIsLeatherworker 1
+
+#   Add trade to villager
+execute if score @s merchantIsLeatherworker matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:3,buy:{id:"minecraft:emerald",Count:10b},sell:{id:"minecraft:bundle",Count:1b},priceMultiplier:0.04f}
+
+#   Add stored uses of trade to villager
+execute if score @s merchantIsLeatherworker matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:bundle",Count:1b}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
 
@@ -112,5 +125,7 @@ tag @s add merchant.villager_modified
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsCartographer
 scoreboard players reset @s merchantIsFisherman
+scoreboard players reset @s merchantIsLeatherworker
 scoreboard players reset @s merchantIsMason
+scoreboard players reset @s merchantIsShepherd
 scoreboard players reset @s merchantIsSmith

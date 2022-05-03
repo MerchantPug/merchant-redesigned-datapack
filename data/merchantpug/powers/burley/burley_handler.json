@@ -33,25 +33,6 @@
                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/burley"
                 },
                 {
-                    "type": "origins:area_of_effect",
-                    "radius": 0.1,
-                    "bientity_action": {
-                        "type": "origins:target_action",
-                        "action": {
-                            "type": "origins:add_velocity",
-                            "y": 0.3,
-                            "space": "world"
-                        }
-                    },
-                    "bientity_condition": {
-                        "type": "origins:target_condition",
-                        "condition": {
-                            "type": "origins:entity_type",
-                            "entity_type": "minecraft:item"
-                        }
-                    }
-                },
-                {
                     "type": "origins:execute_command",
                     "command": "kill @s"
                 },

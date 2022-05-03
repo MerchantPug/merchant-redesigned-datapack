@@ -58,6 +58,68 @@
             ]
         }
     },
+    "fill_pouch_block": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:emerald_block"
+            }
+        },
+        "on_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:231245}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:231246}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "ioi-pi:api/select_extra_item"
+        },
+        "on_item_action": {
+            "type": "origins:modify",
+            "modifier": "ioi-pi:api/select_item"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "say Emerald blocke"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add merchant.fill_pouch_block"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function #ioi-pi:api/selected_item/get"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove merchant.fill_pouch_block"
+                }
+            ]
+        }
+    },
     "empty_pouch": {
         "type": "origins:item_on_item",
         "using_item_condition": {

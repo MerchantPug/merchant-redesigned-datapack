@@ -1,7 +1,7 @@
 #   Count how many elements are in the `Inventory` NBT path of the player this function is executing as
 execute store result score #inventory_elements emeralds if data entity @s Inventory[]
 
-#   Get the sum of `#inventory_elements` and `#eyes_elements` score holders to determine if the Ender Eyes should be spawned or given
+#   Get the sum of `#inventory_elements` and `#eyes_elements` score holders to determine if the Emeralds should be spawned or given
 execute store result score #total_elements emeralds run scoreboard players add #inventory_elements emeralds 1
 
 #   Prepare the Emerald item in the shulker box

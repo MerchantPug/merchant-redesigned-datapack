@@ -8,6 +8,19 @@ scoreboard players add #temp newDamage 1
 
 execute store result block -30000000 0 1602 Items[{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}].tag.merchant.damage int 1 run scoreboard players get #temp newDamage
 
+#   Setup durability text
+scoreboard players operation #display newDamage = goldenShearsDurability merchantConfig
+scoreboard players operation #display newDamage -= #temp newDamage
+
+#   Clear current item lore
+data modify block -30000000 0 1602 Items[{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}].tag.display.Lore set value []
+
+#   Set a sign's text for use with the tag.display.Lore NBT
+data modify block -30000000 0 1603 Text1 set value '["",{"text":"Durability: ","color":"yellow","italic": false},{"score":{"name":"#display","objective":"newDamage"},"color":"yellow","italic": false},{"text":"/","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false}]'
+
+#   Append the string from the sign to the item's `tag.display.Lore` NBT
+data modify block -30000000 0 1602 Items[{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}].tag.display.Lore append from block -30000000 0 1603 Text1
+
 #   Handle if the item breaks or not
 execute if score #temp newDamage >= goldenShearsDurability merchantConfig run scoreboard players set #broken newDamage 1
 

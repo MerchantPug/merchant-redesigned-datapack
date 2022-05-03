@@ -1,6 +1,7 @@
 #  Store objectives for profession checks
 scoreboard objectives add merchantIsCartographer dummy
 scoreboard objectives add merchantIsFisherman dummy
+scoreboard objectives add merchantIsLeatherworker dummy
 scoreboard objectives add merchantIsMason dummy
 scoreboard objectives add merchantIsShepherd dummy
 scoreboard objectives add merchantIsSmith dummy
@@ -31,6 +32,15 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:fisherman"}}] run scorebo
 
 #   Remove actual trade from the villager
 execute if score @s merchantIsFisherman matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:417651}}}]
+
+
+#   LEATHERWORKER
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:leatherworker"}}] run scoreboard players set @s merchantIsLeatherworker 1
+
+#   Remove actual trade from the villager
+execute if score @s merchantIsLeatherworker matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:bundle"}}]
 
 
 #   MASON
@@ -75,6 +85,7 @@ function #merchantpug:powers_to_remove
 
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsCartographer
+scoreboard players reset @s merchantIsLeatherworker
 scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsFisherman
 scoreboard players reset @s merchantIsShepherd
