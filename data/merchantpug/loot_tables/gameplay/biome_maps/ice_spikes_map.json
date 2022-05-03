@@ -9,14 +9,14 @@
                         {
                             "function": "exploration_map",
                             "search_radius": 201,
-                            "destination": "merchantpug:mountain_marker",
+                            "destination": "merchantpug:ice_spikes_marker",
                             "decoration": "target_point",
                             "zoom": 1,
                             "skip_existing_chunks": false
                         },
                         {
                             "function": "set_name",
-                            "name": "Mountain Traveler Map"
+                            "name": "Ice Spikes Traveler Map"
                         }
                     ],
                     "name": "minecraft:map"

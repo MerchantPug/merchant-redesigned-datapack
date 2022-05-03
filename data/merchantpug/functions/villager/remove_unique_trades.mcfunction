@@ -20,7 +20,8 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:cartographer"}}] run scor
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Jungle Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 2 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}]
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Mountain Traveler Map"}'}}}}]
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}]
+
 
 #   FISHERMAN
 

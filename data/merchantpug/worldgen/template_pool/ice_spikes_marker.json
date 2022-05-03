@@ -1,5 +1,5 @@
 {
-    "name": "merchantpug:mountain_marker",
+    "name": "merchantpug:ice_spikes_marker",
     "fallback": "minecraft:empty",
     "elements": [
         {
