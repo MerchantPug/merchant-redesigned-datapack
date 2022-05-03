@@ -5,13 +5,13 @@
 #@within function ioi-pi:impl/selected_item/get/inventory
 
 
-data modify storage ioi-pi:temp temp.items set from block -30000000 0 1602 Items
+data modify storage ioi-pi:temp temp.items set from block -30000000 -64 1602 Items
 
 function ioi-pi:impl/selected_item/modify
 
 
 #   Apply the loaded inventory section
-data modify block -30000000 0 1602 Items set from storage ioi-pi:temp temp.items
+data modify block -30000000 -64 1602 Items set from storage ioi-pi:temp temp.items
 
 function ioi-pi:impl/modify_inventory/apply/inventory
 

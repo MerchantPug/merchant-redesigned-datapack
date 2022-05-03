@@ -6,4 +6,4 @@
 
 
 #   Set the contents of the shulker box as the contents of the player's `EnderItems` NBT
-data modify block -30000000 0 1602 Items set from entity @s EnderItems
+data modify block -30000000 -64 1602 Items set from entity @s EnderItems

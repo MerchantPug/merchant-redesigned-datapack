@@ -26,8 +26,8 @@ execute store result storage ioi-pi:output item.tag.merchant.emeralds int 1 run 
 execute if score #pouch_emeralds emeralds matches 0 run data modify storage ioi-pi:output item.tag.CustomModelData set value 231245
 
 #  Set a sign's text for use with the tag.display.Lore NBT
-execute if score #pouch_emeralds emeralds < emeraldPouchMax merchantConfig run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/","color":"green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"merchantConfig"},"color":"green","italic": false}]'
-execute unless score #pouch_emeralds emeralds < emeraldPouchMax merchantConfig run data modify block -30000000 0 1603 Text1 set value '["",{"text":"€","bold":true,"color":"dark_green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "dark_green","italic": false},{"text":"/","color":"dark_green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"merchantConfig"},"color":"dark_green","italic": false}]'
+execute if score #pouch_emeralds emeralds < emeraldPouchMax merchantConfig run data modify block -30000000 -64 1603 Text1 set value '["",{"text":"€","bold":true,"color":"green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "green","italic": false},{"text":"/","color":"green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"merchantConfig"},"color":"green","italic": false}]'
+execute unless score #pouch_emeralds emeralds < emeraldPouchMax merchantConfig run data modify block -30000000 -64 1603 Text1 set value '["",{"text":"€","bold":true,"color":"dark_green","italic": false},{"storage": "ioi-pi:output", "nbt": "item.tag.merchant.emeralds", "color": "dark_green","italic": false},{"text":"/","color":"dark_green","italic": false},{"score":{"name":"emeraldPouchMax","objective":"merchantConfig"},"color":"dark_green","italic": false}]'
 
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
-data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 0 1603 Text1
+data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 -64 1603 Text1

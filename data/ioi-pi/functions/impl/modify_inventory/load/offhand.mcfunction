@@ -5,4 +5,4 @@
 #@internal
 
 
-data modify block -30000000 0 1602 Items set from storage ioi-pi:temp offhand
+data modify block -30000000 -64 1602 Items set from storage ioi-pi:temp offhand
