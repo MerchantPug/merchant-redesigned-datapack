@@ -14,7 +14,7 @@ execute as @e[tag = merchant.sheared] at @s anchored eyes if score @s merchantPa
 
 #   Clear the entity's sheared status after 1 minute 30 seconds
 execute as @e[tag = merchant.sheared] if score @s merchantShearedTicks matches 1800.. run tag @s add merchant.reset_sheared
-execute as @e[tag = merchant.sheared] if score @s merchantShearedTicks matches 1800.. run tag @s remove merchant.sheared
 execute as @e[tag = merchant.reset_sheared] if score @s merchantShearedTicks matches 1800.. run scoreboard players reset @s merchantShearedTicks
 execute as @e[tag = merchant.reset_sheared] if score @s merchantShearedTicks matches 1800.. run scoreboard players reset @s merchantParticleTicks
-execute as @e[tag = merchant.reset_sheared] if score @s merchantShearedTicks matches 1800.. run tag @s remove merchant.reset_sheared
+execute as @e[tag = merchant.reset_sheared] if score @s merchantShearedTicks matches 1800.. run tag @s remove merchant.sheared
+execute as @e[tag = merchant.reset_sheared] run tag @s remove merchant.reset_sheared
