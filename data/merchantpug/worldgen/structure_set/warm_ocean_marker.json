@@ -1,7 +1,7 @@
 {
     "structures": [
         {
-            "structure": "merchantpug:flower_forest_marker",
+            "structure": "merchantpug:warm_ocean_marker",
             "weight": 1
         }
     ],
@@ -9,6 +9,6 @@
         "type": "minecraft:random_spread",
         "spacing": 10,
         "separation": 5,
-        "salt": 19849829
+        "salt": 19816231
     }
 }

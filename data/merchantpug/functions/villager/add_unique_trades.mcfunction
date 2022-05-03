@@ -24,6 +24,14 @@ execute if score @s merchantIsCartographer matches 1 run function merchantpug:vi
 #   Cleanup
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundJungle
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #not_found foundJungle
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundFlowerForest
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #not_found foundFlowerForest
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundBadlands
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #not_found foundBadlands
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundIceSpikes
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #not_found foundIceSpikes
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundWarmOcean
+execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #not_found foundWarmOcean
 
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundNothing
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #all foundNothing

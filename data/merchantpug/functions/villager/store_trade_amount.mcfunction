@@ -9,6 +9,7 @@ execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomi
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 2 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}}].uses
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}].uses
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 5 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}}].uses
 
 
 #   FISHERMAN

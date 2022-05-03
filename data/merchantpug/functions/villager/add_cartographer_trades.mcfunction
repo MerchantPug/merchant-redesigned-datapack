@@ -3,6 +3,7 @@ scoreboard objectives add foundJungle dummy
 scoreboard objectives add foundFlowerForest dummy
 scoreboard objectives add foundBadlands dummy
 scoreboard objectives add foundIceSpikes dummy
+scoreboard objectives add foundWarmOcean dummy
 scoreboard objectives add foundNothing dummy
 
 #   Run loot table for random trade if the 'merchantRandomisedTradeId' score of the villager is 0
@@ -11,6 +12,7 @@ execute if score @s merchantRandomisedTradeId matches 1 if score #not_found foun
 execute if score @s merchantRandomisedTradeId matches 2 if score #not_found foundFlowerForest matches 1 run scoreboard players set @s merchantRandomisedTradeId 0
 execute if score @s merchantRandomisedTradeId matches 3 if score #not_found foundBadlands matches 1 run scoreboard players set @s merchantRandomisedTradeId 0
 execute if score @s merchantRandomisedTradeId matches 4 if score #not_found foundIceSpikes matches 1 run scoreboard players set @s merchantRandomisedTradeId 0
+execute if score @s merchantRandomisedTradeId matches 4 if score #not_found foundWarmOcean matches 1 run scoreboard players set @s merchantRandomisedTradeId 0
 
 #   Add a placeholder map to the villager's trade table
 execute run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:12,buy:{id:"minecraft:emerald",Count:12b},buyB:{id:"minecraft:compass",Count:1b},sell:{id:"minecraft:map",Count:1b,tag:{merchant:{map:"placeholder"}}},priceMultiplier:0.2f}
@@ -67,12 +69,12 @@ execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found 
 
 #   Ice Spikes Biome Map (Random Trade 4)
 
-#   Locate a 'merchantpug:badlands_marker' structure to make sure one is found before giving the villager a trade
+#   Locate a 'merchantpug:ice_spikes_marker' structure to make sure one is found before giving the villager a trade
 execute if score @s merchantRandomisedTradeId matches 4 at @s store success score #temp foundIceSpikes run locate merchantpug:ice_spikes_marker
 
 execute if score @s merchantRandomisedTradeId matches 4 if score #temp foundIceSpikes matches 0 run scoreboard players set #not_found foundIceSpikes 1
 
-#   If a badlands is found...
+#   If an ice spikes is found...
 #   Setup replacement map in the yellow shulker box
 execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/ice_spikes_map
 
@@ -80,6 +82,21 @@ execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found 
 execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
 execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}].tag
 
+
+#   Warm Ocean Biome Map (Random Trade 5)
+
+#   Locate a 'merchantpug:warm_ocean_marker' structure to make sure one is found before giving the villager a trade
+execute if score @s merchantRandomisedTradeId matches 5 at @s store success score #temp foundWarmOcean run locate merchantpug:warm_ocean_marker
+
+execute if score @s merchantRandomisedTradeId matches 5 if score #temp foundWarmOcean matches 0 run scoreboard players set #not_found foundWarmOcean 1
+
+#   If a warm ocean is found...
+#   Setup replacement map in the yellow shulker box
+execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/warm_ocean_marker
+
+#   Set villager trade to replacement map
+execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
+execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}].tag
 
 
 #   Clear the shulker box
@@ -91,9 +108,10 @@ execute if score @s merchantRandomisedTradeId matches 1 if score #not_found foun
 execute if score @s merchantRandomisedTradeId matches 2 if score #not_found foundFlowerForest matches 1 run scoreboard players set #temp foundNothing 1
 execute if score @s merchantRandomisedTradeId matches 3 if score #not_found foundBadlands matches 1 run scoreboard players set #temp foundNothing 1
 execute if score @s merchantRandomisedTradeId matches 4 if score #not_found foundIceSpikes matches 1 run scoreboard players set #temp foundNothing 1
+execute if score @s merchantRandomisedTradeId matches 5 if score #not_found foundWarmOcean matches 1 run scoreboard players set #temp foundNothing 1
 
 #   Set the 'foundNothing' score for #all if all biomes have not been found
-execute if score #not_found foundJungle matches 1 if score #not_found foundFlowerForest matches 1 if score #not_found foundBadlands matches 1 if score #not_found foundIceSpikes matches 1 run scoreboard players set #all foundNothing 1
+execute if score #not_found foundJungle matches 1 if score #not_found foundFlowerForest matches 1 if score #not_found foundBadlands matches 1 if score #not_found foundIceSpikes matches 1 if score #not_found foundWarmOcean matches 1 run scoreboard players set #all foundNothing 1
 
 #  Reset scores upon 
 execute if score #temp foundNothing matches 1 run scoreboard players set @s merchantRandomisedTradeId 0
