@@ -18,11 +18,16 @@ execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomi
 execute as @s[nbt={VillagerData:{profession:"minecraft:leatherworker"}}] run scoreboard players set @s merchantIsLeatherworker 1
 
 #   Remove actual trade from the villager
-execute if score @s merchantIsLeatherworker matches 1 if score @s merchantTraderXp matches 1.. run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bundle"}}]
+execute if score @s merchantIsLeatherworker matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bundle"}}].uses
+
+
+#   LIBRARIAN
+execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scoreboard players set @s merchantIsLibrarian 1
+
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"So Sorry.",author:MerchantPug}}}].uses
 
 
 #   FISHERMAN
-
 execute as @s[nbt={VillagerData:{profession:"minecraft:fisherman"}}] run scoreboard players set @s merchantIsFisherman 1
 
 #   Store trade amount in villager scoreboard

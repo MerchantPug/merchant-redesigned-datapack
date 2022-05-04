@@ -1,0 +1,1 @@
+execute if score #emerald_block_remainder emeralds matches 1.. run function merchantpug:emerald_pouch/emerald_block/fill/after_modify/get_overflowing_emeralds

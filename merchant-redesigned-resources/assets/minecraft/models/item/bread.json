@@ -27,6 +27,42 @@
                 "custom_model_data": 417651
             },
             "model": "merchantpug:item/burley"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554615
+            },
+            "model": "merchantpug:item/glow_salt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554616
+            },
+            "model": "merchantpug:item/glow_salt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554617
+            },
+            "model": "merchantpug:item/glow_salt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554618
+            },
+            "model": "merchantpug:item/glow_salt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554619
+            },
+            "model": "merchantpug:item/glow_salt"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 554620
+            },
+            "model": "merchantpug:item/glow_salt"
         }
     ]
 }

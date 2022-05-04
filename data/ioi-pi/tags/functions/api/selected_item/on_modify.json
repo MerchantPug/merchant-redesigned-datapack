@@ -1,5 +1,6 @@
 {
     "values": [
+        "merchantpug:condiments/glow_salt/check_glow_salt",
         "merchantpug:emerald_pouch/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/emerald_block/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/empty/check_empty_pouch",

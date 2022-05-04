@@ -1,4 +1,4 @@
-#   Add an example scoreboard objective
+#   Add an emeralds scoreboard objective
 scoreboard objectives add emeralds dummy
 
 

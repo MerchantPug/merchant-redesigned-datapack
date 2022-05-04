@@ -2,6 +2,7 @@
 scoreboard objectives add merchantIsCartographer dummy
 scoreboard objectives add merchantIsFisherman dummy
 scoreboard objectives add merchantIsLeatherworker dummy
+scoreboard objectives add merchantIsLibrarian dummy
 scoreboard objectives add merchantIsMason dummy
 scoreboard objectives add merchantIsShepherd dummy
 scoreboard objectives add merchantIsSmith dummy
@@ -61,6 +62,17 @@ execute if score @s merchantIsLeatherworker matches 1 run data modify entity @s 
 execute if score @s merchantIsLeatherworker matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:bundle",Count:1b}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
+#   LIBRARIAN
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scoreboard players set @s merchantIsLibrarian 1
+
+#   Add trade to villager
+execute if score @s merchantIsLibrarian matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:1,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:written_book",Count:1b,tag:{pages:['{"text":"*sigh* I made a severe and continuous lapse in my judgement, and I don\\u2019t expect to be forgiven. I\\u2019m simply here to apologize. What I realised about my idea for the librarian was obviously unplanned. The writing you see in this book is raw; it were unfiltered. I did not know how to react or how to feel."}','{"text":"I should have never tried to make a libarian trade. I should have put Visual Studio Code down and stopped working on what I was going through. There\'s a lot of things I should have done differently but I didn\'t. And for that, from the bottom of my heart, I am sorry."}','{"text":"I want to apologize to the player. I want to apologize to anyone who has seen the datapack. I want to apologize to anyone who has been affected or touched by librarians, or villagers, or book trades. For my fans who are defending my actions,"}','{"text":"please don\'t. I don\\u2019t deserve to be defended. The goal with my content is always to entertain; to push the boundaries, to be all-inclusive. In the world I live in, I share almost everything I do. The intent is never to be lazy, hesitant, or to procrastinate."}','{"text":"Like I said I made a huge mistake. I don\\u2019t expect to be forgiven, I\\u2019m just here to apologize. I\'m ashamed of myself. I\\u2019m disappointed in myself. And I promise to be better. I will be better. Thank you."}'],title:"So Sorry.",author:MerchantPug}}}
+
+#   Add stored uses of trade to villager
+execute if score @s merchantIsLibrarian matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{pages:['{"text":"*sigh* I made a severe and continuous lapse in my judgement, and I don\\u2019t expect to be forgiven. I\\u2019m simply here to apologize. What I realised about my idea for the librarian was obviously unplanned. The writing you see in this book is raw; it were unfiltered. I did not know how to react or how to feel."}','{"text":"I should have never tried to make a libarian trade. I should have put Visual Studio Code down and stopped working on what I was going through. There\'s a lot of things I should have done differently but I didn\'t. And for that, from the bottom of my heart, I am sorry."}','{"text":"I want to apologize to the player. I want to apologize to anyone who has seen the datapack. I want to apologize to anyone who has been affected or touched by librarians, or villagers, or book trades. For my fans who are defending my actions,"}','{"text":"please don\'t. I don\\u2019t deserve to be defended. The goal with my content is always to entertain; to push the boundaries, to be all-inclusive. In the world I live in, I share almost everything I do. The intent is never to be lazy, hesitant, or to procrastinate."}','{"text":"Like I said I made a huge mistake. I don\\u2019t expect to be forgiven, I\\u2019m just here to apologize. I\'m ashamed of myself. I\\u2019m disappointed in myself. And I promise to be better. I will be better. Thank you."}'],title:"So Sorry.",author:MerchantPug}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
 
 #   MASON
 
@@ -81,7 +93,6 @@ execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTrad
 #   Terracotta Bag Shades (Random Trade 3)
 execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:bread",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Cool)","italic":false}'},CustomModelData:231250}},priceMultiplier:0.02f}
 execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231250}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
-
 
 
 #   SHEPHERD
@@ -126,6 +137,7 @@ tag @s add merchant.villager_modified
 scoreboard players reset @s merchantIsCartographer
 scoreboard players reset @s merchantIsFisherman
 scoreboard players reset @s merchantIsLeatherworker
+scoreboard players reset @s merchantIsLibrarian
 scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsShepherd
 scoreboard players reset @s merchantIsSmith

@@ -8,3 +8,5 @@ execute if score #modelData isEmeraldPouch matches 231246 run scoreboard players
 execute if score on_modify ioi-pi matches 1 if entity @s[tag = merchant.fill_pouch_block] if data storage ioi-pi:output {item:{id:"minecraft:knowledge_book"}} if score #temp isEmeraldPouch matches 1 run function merchantpug:emerald_pouch/emerald_block/fill/fill_pouch
 
 scoreboard players reset #temp isEmeraldPouch
+
+execute if score after_modifying ioi-pi matches 1 if entity @s[tag=merchant.fill_pouch_block] run function merchantpug:emerald_pouch/emerald_block/fill/after_modify/overflow_emeralds

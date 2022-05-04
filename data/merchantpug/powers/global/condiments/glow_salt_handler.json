@@ -1,8 +1,26 @@
 {
-    "type": "origins:prevent_item_use",
-    "item_condition": {
-        "type": "origins:or",
+    "type": "origins:item_on_item",
+    "using_item_condition": {
+        "type": "origins:and",
         "conditions": [
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:bread"
+                }
+            },
+            {
+                "type": "origins:nbt",
+                "nbt": "{CustomModelData:554615}"
+            }
+        ]
+    },
+    "on_item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food"
+            },
             {
                 "type": "origins:and",
                 "conditions": [
@@ -17,10 +35,6 @@
                         "conditions": [
                             {
                                 "type": "origins:nbt",
-                                "nbt": "{CustomModelData:417651}"
-                            },
-                            {
-                                "type": "origins:nbt",
                                 "nbt": "{CustomModelData:231248}"
                             },
                             {
@@ -30,6 +44,10 @@
                             {
                                 "type": "origins:nbt",
                                 "nbt": "{CustomModelData:231250}"
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{CustomModelData:417651}"
                             },
                             {
                                 "type": "origins:nbt",
@@ -57,41 +75,34 @@
                             }
                         ]
                     }
-                ]
-            },
-            {
-                "type": "origins:and",
-                "conditions": [
-                    {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                            "item": "minecraft:knowledge_book"
-                        }
-                    },
-                    {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:15641}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:156655}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231245}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231246}"
-                            }
-                        ]
-                    }
-                ]
+                ],
+                "inverted": true
             }
         ]
     },
-    "name": "Hi"
+    "using_item_action": {
+        "type": "origins:modify",
+        "modifier": "ioi-pi:api/select_extra_item"
+    },
+    "on_item_action": {
+        "type": "origins:modify",
+        "modifier": "ioi-pi:api/select_item"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s add merchant.apply_glow_salt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "function #ioi-pi:api/selected_item/get"
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s remove merchant.apply_glow_salt"
+            }
+        ]
+    }
 }
