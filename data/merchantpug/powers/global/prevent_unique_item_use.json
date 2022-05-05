@@ -38,22 +38,6 @@
                             {
                                 "type": "origins:nbt",
                                 "nbt": "{CustomModelData:554616}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554617}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554618}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554619}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554630}"
                             }
                         ]
                     }

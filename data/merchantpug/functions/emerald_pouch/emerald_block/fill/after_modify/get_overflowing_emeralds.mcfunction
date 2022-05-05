@@ -15,4 +15,7 @@ execute if score #total_elements emeralds matches 37.. run loot spawn ~ ~ ~ mine
 
 execute unless score #total_elements emeralds matches 37.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
 
+#   Cleanup block remainder and items in shulker
+scoreboard players reset #emerald_block_remainder emeralds
+
 data remove block -30000000 -64 1602 Items

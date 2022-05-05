@@ -1,6 +1,7 @@
 {
 	"powers": [
 		"merchantpug:global/condiments/glow_salt_handler",
+		"merchantpug:global/condiments/parrot_macadamias_handler",
 		"merchantpug:global/disable_pouch_crafting",
         "merchantpug:global/emerald_pouch/emerald_pouch_handler",
         "merchantpug:global/golden_shears",

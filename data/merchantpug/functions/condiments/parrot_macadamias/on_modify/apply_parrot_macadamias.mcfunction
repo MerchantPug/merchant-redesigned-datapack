@@ -3,7 +3,7 @@ scoreboard objectives add condiment dummy
 
 #   Play a sound event upon putting emeralds to the Emerald Pouch
 playsound minecraft:block.sand.step master @s ~ ~ ~ 0.35 1.2
-playsound minecraft:entity.glow_squid.ambient master @s ~ ~ ~ 1.0 1.0
+playsound minecraft:entity.parrot.fly master @s ~ ~ ~ 1.0 0.7
 
 #   Store the count of how much glow salt was used on the item.
 execute store result score #condiment_count condiment run clear @s minecraft:bread{ioi-pi: {selected: 1b, extra: 1b}} 0
@@ -34,11 +34,11 @@ execute if data storage merchantpug:temp prev_lore[0] run function merchantpug:c
 
 data modify storage ioi-pi:output item.tag.display.Lore set from storage merchantpug:temp new_lore
 
-data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Condiment: Glow Salt","color":"blue","italic": false}]'
+data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Condiment: Parrot Macadamias","color":"blue","italic": false}]'
 
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
 data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 -64 1603 Text1
-data modify storage ioi-pi:output item.tag.merchant.condiment_id set value 1b
+data modify storage ioi-pi:output item.tag.merchant.condiment_id set value 2b
 
 #   Cleanup
 scoreboard players reset #count condiment

@@ -13,7 +13,7 @@
                 },
                 {
                     "type": "origins:nbt",
-                    "nbt": "{CustomModelData:554615}"
+                    "nbt": "{CustomModelData:554616}"
                 }
             ]
         },
@@ -22,7 +22,7 @@
             "conditions": [
                 {
                     "type": "origins:nbt",
-                    "nbt": "{merchant:{condiment_id:1b}}",
+                    "nbt": "{merchant:{condiment_id:2b}}",
                     "inverted": true
                 },
                 {
@@ -84,7 +84,7 @@
             "actions": [
                 {
                     "type": "apoli:execute_command",
-                    "command": "tag @s add merchant.apply_glow_salt"
+                    "command": "tag @s add merchant.apply_parrot_macadamias"
                 },
                 {
                     "type": "origins:execute_command",
@@ -92,20 +92,58 @@
                 },
                 {
                     "type": "apoli:execute_command",
-                    "command": "tag @s remove merchant.apply_glow_salt"
+                    "command": "tag @s remove merchant.apply_parrot_macadamias"
                 }
             ]
         }
     },
-    "food_always_edible": {
+    "food_effect": {
         "type": "origins:modify_food",
         "item_condition": {
             "type": "origins:nbt",
-            "nbt": "{merchant:{condiment_id:1b}}"
+            "nbt": "{merchant:{condiment_id:2b}}"
         },
         "entity_action": {
-            "type": "origins:execute_command",
-            "command": "power grant MerchantPug merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:fall_flying"
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:add_velocity",
+                        "z": 0.25,
+                        "space": "local_horizontal"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.bat.takeoff player @a ~ ~ ~ 1.0 1.3"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle cloud ~ ~ ~ 0.25 0.25 0.25 0.15 4"
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:add_velocity",
+                        "z": 1.0,
+                        "space": "local_horizontal"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.bat.takeoff player @a ~ ~ ~ 1.0 1.3"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle cloud ~ ~ ~ 0.25 0.25 0.25 0.15 8"
+                    }
+                ]
+            }
         }
     }
 }

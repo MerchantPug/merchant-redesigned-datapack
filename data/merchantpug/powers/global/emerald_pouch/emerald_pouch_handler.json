@@ -103,10 +103,6 @@
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "say Emerald blocke"
-                },
-                {
-                    "type": "origins:execute_command",
                     "command": "tag @s add merchant.fill_pouch_block"
                 },
                 {
