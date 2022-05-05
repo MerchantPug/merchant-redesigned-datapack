@@ -105,7 +105,7 @@
         },
         "entity_action": {
             "type": "origins:execute_command",
-            "command": "power grant MerchantPug merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
+            "command": "power grant @s merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
         }
     }
 }

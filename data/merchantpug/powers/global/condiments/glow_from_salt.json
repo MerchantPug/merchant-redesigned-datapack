@@ -23,7 +23,7 @@
         },
         "falling_action": {
             "type": "origins:execute_command",
-            "command": "power revoke MerchantPug merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
+            "command": "power revoke @s merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
         },
         "interval": 1,
         "condition": {
@@ -43,7 +43,7 @@
         },
         "entity_action": {
             "type": "origins:execute_command",
-            "command": "power revoke MerchantPug merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
+            "command": "power revoke @s merchantpug:global/condiments/glow_from_salt merchantpug:glow_salt"
         }
     },
     "food_effect": {
