@@ -113,7 +113,7 @@
                 "actions": [
                     {
                         "type": "origins:add_velocity",
-                        "z": 0.25,
+                        "z": 0.5,
                         "space": "local_horizontal"
                     },
                     {

@@ -116,11 +116,11 @@
             ]
         }
     },
-    "normal_block_entity_hit": {
+    "normal_entity_hit": {
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:raycast",
-            "distance": 4.5,
+            "distance": 3.0,
             "block": false,
             "entity": true,
             "command_at_hit": "particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 1 4 force"
@@ -146,11 +146,11 @@
             ]
         }
     },
-    "creative_block_entity_hit": {
+    "creative_entity_hit": {
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:raycast",
-            "distance": 5.0,
+            "distance": 6.0,
             "block": false,
             "entity": true,
             "command_at_hit": "particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 1 4 force"
@@ -175,11 +175,11 @@
             ]
         }
     },
-    "enderian_block_entity_hit": {
+    "enderian_entity_hit": {
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:raycast",
-            "distance": 6.0,
+            "distance": 4.5,
             "block": false,
             "entity": true,
             "command_at_hit": "particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 1 4 force"
@@ -208,7 +208,7 @@
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:raycast",
-            "distance": 6.5,
+            "distance": 7.5,
             "block": false,
             "entity": true,
             "command_at_hit": "particle minecraft:happy_villager ~ ~ ~ 0.25 0.25 0.25 1 4 force"

@@ -9,8 +9,6 @@ execute as @e[type=marker,tag=merchant.villager_paired] if score @s markerTime =
 
 execute as @e[type=minecraft:zombie_villager] if score @s merchantVillagerId = #current merchantVillagerId run scoreboard players operation @s merchantRandomisedTradeId = #current merchantRandomisedTradeId
 
-execute as @e[type=minecraft:zombie_villager] if score @s merchantVillagerId = #current merchantVillagerId run tag @s add merchant.dont_reset_trade
-
 execute as @e[type=minecraft:zombie_villager] if score @s merchantVillagerId = #current merchantVillagerId run function merchantpug:villager/remove_unique_trades
 
 execute as @e[type=marker,tag=merchant.villager_paired] if score @s markerTime = #current_gametime markerTime run kill @s
