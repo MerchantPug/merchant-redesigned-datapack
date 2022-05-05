@@ -4,6 +4,7 @@
 		"merchantpug:global/condiments/parrot_macadamias_handler",
 		"merchantpug:global/disable_pouch_crafting",
         "merchantpug:global/emerald_pouch/emerald_pouch_handler",
+		"merchantpug:global/runes/apply/add_emerald_rune_tools",
         "merchantpug:global/golden_shears",
         "merchantpug:global/prevent_unique_item_use",
 		"merchantpug:global/repair_anvil_with_polish",

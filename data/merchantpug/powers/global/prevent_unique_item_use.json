@@ -1,77 +1,36 @@
 {
     "type": "origins:prevent_item_use",
     "item_condition": {
-        "type": "origins:or",
+        "type": "origins:and",
         "conditions": [
             {
-                "type": "origins:and",
-                "conditions": [
-                    {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                            "item": "minecraft:bread"
-                        }
-                    },
-                    {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:417651}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231248}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231249}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231250}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554615}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:554616}"
-                            }
-                        ]
-                    }
-                ]
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:knowledge_book"
+                }
             },
             {
-                "type": "origins:and",
+                "type": "origins:or",
                 "conditions": [
                     {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                            "item": "minecraft:knowledge_book"
-                        }
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:15641}"
                     },
                     {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:15641}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:156655}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231245}"
-                            },
-                            {
-                                "type": "origins:nbt",
-                                "nbt": "{CustomModelData:231246}"
-                            }
-                        ]
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:156655}"
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:231245}"
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:231246}"
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:416515}"
                     }
                 ]
             }

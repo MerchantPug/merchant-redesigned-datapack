@@ -1,5 +1,7 @@
 #  Store objectives for profession checks
+scoreboard objectives add merchantIsButcher dummy
 scoreboard objectives add merchantIsCartographer dummy
+scoreboard objectives add merchantIsFarmer dummy
 scoreboard objectives add merchantIsFisherman dummy
 scoreboard objectives add merchantIsLeatherworker dummy
 scoreboard objectives add merchantIsLibrarian dummy
@@ -13,6 +15,20 @@ execute store result score @s merchantTraderXp run data get entity @s Xp
 
 #   Initial setup of Randomised Trade ID score
 scoreboard players add @s merchantRandomisedTradeId 0
+
+
+#   BUTCHER
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:butcher"}}] run scoreboard players set @s merchantIsButcher 1
+
+#   Run loot table for random trade if the 'merchantRandomisedTradeId' score of the villager is 0
+#   This one is more for futureproofing as I will be adding more condiments
+execute if score @s merchantIsButcher matches 1 if score @s merchantRandomisedTradeId matches 0 store result score @s merchantRandomisedTradeId run loot spawn ~ ~ ~ loot merchantpug:random/butcher_rng
+
+#   Parrot Macadamias (Random Trade 1)
+execute if score @s merchantIsButcher matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:nether_brick",Count:3b,tag:{display:{Name:'{"text":"Glow Salt","italic":false}'},CustomModelData:554615}}}
+execute if score @s merchantIsButcher matches 1 if score @s merchantRandomisedTradeId matches 1 store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:554615}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
 #   CARTOGRAPHER
@@ -38,16 +54,30 @@ execute if score @s merchantIsCartographer matches 1 run scoreboard players rese
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundNothing
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #all foundNothing
 
+#   FARMER
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:farmer"}}] run scoreboard players set @s merchantIsFarmer 1
+
+#   Run loot table for random trade if the 'merchantRandomisedTradeId' score of the villager is 0
+#   This one is more for futureproofing as I will be adding more condiments
+execute if score @s merchantIsFarmer matches 1 if score @s merchantRandomisedTradeId matches 0 store result score @s merchantRandomisedTradeId run loot spawn ~ ~ ~ loot merchantpug:random/farmer_rng
+
+#   Parrot Macadamias (Random Trade 1)
+execute if score @s merchantIsFarmer matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:nether_brick",Count:3b,tag:{display:{Name:'{"text":"Parrot Macadamias","italic":false}'},CustomModelData:554616}}}
+execute if score @s merchantIsFarmer matches 1 if score @s merchantRandomisedTradeId matches 1 store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:554616}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+
 #   FISHERMAN
 
 #   Setup scoreboard
 execute as @s[nbt={VillagerData:{profession:"minecraft:fisherman"}}] run scoreboard players set @s merchantIsFisherman 1
 
 #   Add trade to villager
-execute if score @s merchantIsFisherman matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:6,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:bread",Count:3b,tag:{display:{Name:'{"text":"Burley","italic":false}'},CustomModelData:417651}}}
+execute if score @s merchantIsFisherman matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:6,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:nether_brick",Count:3b,tag:{display:{Name:'{"text":"Burley","italic":false}'},CustomModelData:417651}}}
 
 #   Add stored uses of trade to villager
-execute if score @s merchantIsFisherman matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:417651}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+execute if score @s merchantIsFisherman matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:417651}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
 #   LEATHERWORKER
@@ -83,16 +113,16 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:mason"}}] run scoreboard 
 execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 0 store result score @s merchantRandomisedTradeId run loot spawn ~ ~ ~ loot merchantpug:random/mason_rng
 
 #   Terracotta Bag Warm (Random Trade 1)
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:bread",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Warm)","italic":false}'},CustomModelData:231248}},priceMultiplier:0.02f}
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 1 store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231248}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:nether_brick",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Warm)","italic":false}'},CustomModelData:231248}},priceMultiplier:0.02f}
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 1 store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231248}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 #   Terracotta Bag Cool (Random Trade 2)
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 2 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:bread",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Cool)","italic":false}'},CustomModelData:231249}},priceMultiplier:0.02f}
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 2 store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231249}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 2 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:nether_brick",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Cool)","italic":false}'},CustomModelData:231249}},priceMultiplier:0.02f}
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 2 store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231249}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 #   Terracotta Bag Shades (Random Trade 3)
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:bread",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Cool)","italic":false}'},CustomModelData:231250}},priceMultiplier:0.02f}
-execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 store result entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231250}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:6b},sell:{id:"minecraft:nether_brick",Count:1b,tag:{display:{Name:'{"text":"Terracotta Bag (Cool)","italic":false}'},CustomModelData:231250}},priceMultiplier:0.02f}
+execute if score @s merchantIsMason matches 1 if score @s merchantRandomisedTradeId matches 3 store result entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231250}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
 #   SHEPHERD

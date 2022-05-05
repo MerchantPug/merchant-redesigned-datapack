@@ -10,7 +10,7 @@ scoreboard players operation #items_to_add emeralds *= #nine emeralds
 execute store result score #items_added emeralds run data get storage ioi-pi:output item.tag.merchant.emeralds
 
 #   Add the sum of `#items_to_add` and `#items_added` score holders to the `item.tag.merchant.emeralds` NBT path of the `ioi-pi:output` storage
-scoreboard players operation #items_to_add emeralds += #items_added emeraldsToWithdraw
+scoreboard players operation #items_to_add emeralds += #items_added emeralds
 
 execute if score #items_to_add emeralds > emeraldPouchMax merchantConfig run function merchantpug:emerald_pouch/emerald_block/fill/on_modify/get_extra_emeralds
 

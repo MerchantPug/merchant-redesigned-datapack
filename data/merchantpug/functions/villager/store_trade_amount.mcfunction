@@ -1,6 +1,15 @@
 #   Store Xp so it can check for it before storing uses of trades
 execute store result score @s merchantTraderXp run data get entity @s Xp
 
+
+#   BUTCHER
+
+execute as @s[nbt={VillagerData:{profession:"minecraft:mason"}}] run scoreboard players set @s merchantIsButcher 1
+
+#   Store trade amount in villager scoreboard
+execute if score @s merchantIsButcher matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 1 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:554615}}}].uses
+
+
 #   CARTOGRAPHER
 #   Setup scoreboard
 execute as @s[nbt={VillagerData:{profession:"minecraft:cartographer"}}] run scoreboard players set @s merchantIsCartographer 1
@@ -27,11 +36,19 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scorebo
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"So Sorry.",author:MerchantPug}}}].uses
 
 
+#   FARMER
+
+execute as @s[nbt={VillagerData:{profession:"minecraft:mason"}}] run scoreboard players set @s merchantIsFarmer 1
+
+#   Store trade amount in villager scoreboard
+execute if score @s merchantIsFarmer matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 1 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:554616}}}].uses
+
+
 #   FISHERMAN
 execute as @s[nbt={VillagerData:{profession:"minecraft:fisherman"}}] run scoreboard players set @s merchantIsFisherman 1
 
 #   Store trade amount in villager scoreboard
-execute if score @s merchantIsFisherman matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:417651}}}].uses
+execute if score @s merchantIsFisherman matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:417651}}}].uses
 
 
 #   MASON
@@ -39,9 +56,9 @@ execute if score @s merchantIsFisherman matches 1 if score @s merchantTraderXp m
 execute as @s[nbt={VillagerData:{profession:"minecraft:mason"}}] run scoreboard players set @s merchantIsMason 1
 
 #   Store trade amount in villager scoreboard
-execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 1 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231248}}}].uses
-execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 2 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231249}}}].uses
-execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 3 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:bread",tag:{CustomModelData:231250}}}].uses
+execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 1 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231248}}}].uses
+execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 2 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231249}}}].uses
+execute if score @s merchantIsMason matches 1 if score @s merchantTraderXp matches 1.. if score @s merchantRandomisedTradeId matches 3 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:231250}}}].uses
 
 
 #   SHEPHERD

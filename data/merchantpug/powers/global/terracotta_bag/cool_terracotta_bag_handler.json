@@ -14,7 +14,7 @@
                 {
                     "type": "origins:ingredient",
                     "ingredient": {
-                        "item": "minecraft:bread"
+                        "item": "minecraft:nether_brick"
                     }
                 },
                 {
@@ -80,7 +80,7 @@
                     {
                         "type": "origins:ingredient",
                         "ingredient": {
-                            "item": "minecraft:bread"
+                            "item": "minecraft:nether_brick"
                         }
                     },
                     {
@@ -131,7 +131,7 @@
                     {
                         "type": "origins:ingredient",
                         "ingredient": {
-                            "item": "minecraft:bread"
+                            "item": "minecraft:nether_brick"
                         }
                     },
                     {

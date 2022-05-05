@@ -27,6 +27,12 @@
                 "custom_model_data": 231246
             },
             "model": "merchantpug:item/emerald_bundle_filled"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416515
+            },
+            "model": "merchantpug:item/emerald_rune"
         }
     ]
 }

@@ -1,12 +1,12 @@
-#   Add an example scoreboard objective
+#   Add a scoreboard objective
 scoreboard objectives add condiment dummy
 
-#   Play a sound event upon putting emeralds to the Emerald Pouch
-playsound minecraft:block.sand.step master @s ~ ~ ~ 0.35 1.2
-playsound minecraft:entity.glow_squid.ambient master @s ~ ~ ~ 1.0 1.0
+#   Play a sound event upon applying the condiment to the food
+playsound minecraft:block.sand.step player @a ~ ~ ~ 0.35 1.2
+playsound minecraft:entity.glow_squid.ambient player @a ~ ~ ~ 1.0 1.0
 
-#   Store the count of how much glow salt was used on the item.
-execute store result score #condiment_count condiment run clear @s minecraft:bread{ioi-pi: {selected: 1b, extra: 1b}} 0
+#   Store the count of how much glow salt was used on the item
+execute store result score #condiment_count condiment run clear @s minecraft:nether_brick{ioi-pi: {selected: 1b, extra: 1b}} 0
 
 #   Get the count of the output item
 execute store result score #count condiment run data get storage ioi-pi:output item.Count

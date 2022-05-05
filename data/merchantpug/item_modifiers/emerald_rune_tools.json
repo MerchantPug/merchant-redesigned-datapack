@@ -1,0 +1,7 @@
+[
+    {
+        "function": "apoli:add_power",
+        "power": "merchantpug:global/runes/effect/emerald_rune_tool",
+        "slot": "mainhand"
+    }
+]

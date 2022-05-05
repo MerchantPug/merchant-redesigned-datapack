@@ -5,6 +5,7 @@
         "merchantpug:emerald_pouch/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/emerald_block/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/empty/check_empty_pouch",
-        "merchantpug:emerald_pouch/check_init"
+        "merchantpug:emerald_pouch/check_init",
+        "merchantpug:rune/check_emerald_rune"
     ]
 }

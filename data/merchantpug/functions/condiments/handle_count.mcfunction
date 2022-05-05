@@ -1,4 +1,4 @@
-execute if score #recurse condiment matches 1.. run clear @s minecraft:bread{ioi-pi: {selected: 1b, extra: 1b}} 1
+execute if score #recurse condiment matches 1.. run clear @s minecraft:nether_brick{ioi-pi: {selected: 1b, extra: 1b}} 1
 
 execute if score #recurse condiment matches 1.. run scoreboard players remove #count condiment 1
 scoreboard players remove #recurse condiment 1
