@@ -109,10 +109,12 @@ execute if score @s merchantIsSmith matches 1 run data remove entity @s Offers.R
 tag @s remove merchant.villager_modified
 
 #   Reset randomised trade if the villager hasn't been locked
-execute if score @s merchantTraderXp matches 0 run scoreboard players reset @s merchantRandomisedTradeId
+execute as @s[tag=!merchant.dont_reset_trade] if score @s merchantTraderXp matches 0 run scoreboard players reset @s merchantRandomisedTradeId
 
 #   Run power removal functions (default and any compatible functions)
 function #merchantpug:powers_to_remove
+
+tag @s remove merchant.dont_reset_trade
 
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsCartographer
