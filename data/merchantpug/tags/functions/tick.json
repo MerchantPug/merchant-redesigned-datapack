@@ -1,6 +1,7 @@
 {
     "values": [
         "merchantpug:burley/burley",
+        "merchantpug:rune/rune_armor_effects",
         "merchantpug:villager/removal_checks/remove_if_workstation_broken",
         "merchantpug:villager/removal_checks/remove_if_no_merchant",
         "merchantpug:villager/removal_checks/remove_if_leveled_up",

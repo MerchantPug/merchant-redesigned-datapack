@@ -30,9 +30,45 @@
         },
         {
             "predicate": {
+                "custom_model_data": 416514
+            },
+            "model": "merchantpug:item/rune_essence"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 416515
             },
             "model": "merchantpug:item/emerald_rune"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416516
+            },
+            "model": "merchantpug:item/fire_rune"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416517
+            },
+            "model": "merchantpug:item/frost_rune"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416518
+            },
+            "model": "merchantpug:item/draconic_rune"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416519
+            },
+            "model": "merchantpug:item/deep_sea_rune"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 416520
+            },
+            "model": "merchantpug:item/rainbow_rune"
         }
     ]
 }

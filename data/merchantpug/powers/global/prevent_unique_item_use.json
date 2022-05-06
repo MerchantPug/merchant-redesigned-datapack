@@ -30,7 +30,19 @@
                     },
                     {
                         "type": "origins:nbt",
+                        "nbt": "{CustomModelData:416514}"
+                    },
+                    {
+                        "type": "origins:nbt",
                         "nbt": "{CustomModelData:416515}"
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:416516}"
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:416517}"
                     }
                 ]
             }

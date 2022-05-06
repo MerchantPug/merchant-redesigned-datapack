@@ -1,0 +1,613 @@
+{
+    "type": "origins:multiple",
+    "none": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_feet\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_feet\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_feet\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_feet\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_feet\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_tool\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_head\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_chest\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_legs\"}]}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_feet\"}]}",
+                    "inverted": true
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_rune_essence"
+        }
+    },
+    "emerald": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/emerald/emerald_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_emerald_rune"
+        }
+    },
+    "fire": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/fire/fire_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_fire_rune"
+        }
+    },
+    "frost": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/frost/frost_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_frost_rune"
+        }
+    },
+    "draconic": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/draconic/draconic_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_draconic_rune"
+        }
+    },
+    "deep_sea": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416520}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/deep_sea/deep_sea_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_deep_sea_rune"
+        }
+    },
+    "rainbow": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:knowledge_book"
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416515}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416516}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416517}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416518}"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{CustomModelData:416519}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "on_item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_tool\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_head\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_chest\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_legs\"}]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Powers:[{Power: \"merchantpug:global/runes/effect/rainbow/rainbow_rune_feet\"}]}"
+                }
+            ]
+        },
+        "using_item_action": {
+            "type": "origins:modify",
+            "modifier": "merchantpug:set_rainbow_rune"
+        }
+    }
+}

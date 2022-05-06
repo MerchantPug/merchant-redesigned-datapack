@@ -1,0 +1,1 @@
+execute if score on_modify ioi-pi matches 1 if score on_modify ioi-pi matches 1 if entity @s[tag = merchant.apply_rune_essence] run function merchantpug:rune/on_modify/rune_essence/remove_rune

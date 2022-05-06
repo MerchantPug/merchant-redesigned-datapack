@@ -1,0 +1,6 @@
+[
+    {
+        "function": "set_nbt",
+        "tag": "{display:{Name:'{\"text\":\"Deep Sea Rune\",\"color\":\"aqua\",\"italic\":false}'},CustomModelData:416519,Enchantments:[{id:\"null:null\",lvl:1s}]}"
+    }
+]

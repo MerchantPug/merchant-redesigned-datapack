@@ -1,8 +1,10 @@
 #  Store objectives for profession checks
 scoreboard objectives add merchantIsButcher dummy
 scoreboard objectives add merchantIsCartographer dummy
+scoreboard objectives add merchantIsCleric dummy
 scoreboard objectives add merchantIsFarmer dummy
 scoreboard objectives add merchantIsFisherman dummy
+scoreboard objectives add merchantIsFletcher dummy
 scoreboard objectives add merchantIsLeatherworker dummy
 scoreboard objectives add merchantIsLibrarian dummy
 scoreboard objectives add merchantIsMason dummy
@@ -14,7 +16,7 @@ scoreboard objectives add merchantIsSmith dummy
 function merchantpug:villager/store_trade_amount
 
 
-#   FARMER
+#   BUTCHER
 
 #   Setup scoreboard
 execute as @s[nbt={VillagerData:{profession:"minecraft:butcher"}}] run scoreboard players set @s merchantIsButcher 1
@@ -32,6 +34,20 @@ execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomi
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}}]
+
+
+#   CLERIC
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:cleric"}}] run scoreboard players set @s merchantIsCleric 1
+
+#   Remove additional trade from the villager
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416515}}}]
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 2 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416516}}}]
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416517}}}]
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416518}}}]
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416519}}}]
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 6 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416520}}}]
 
 
 #   FARMER
@@ -67,8 +83,8 @@ execute if score @s merchantIsLeatherworker matches 1 run data remove entity @s 
 execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scoreboard players set @s merchantIsLibrarian 1
 
 #   Remove actual trade from the villager
-execute if score @s merchantIsLibrarian matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"So Sorry.",author:MerchantPug}}}]
-
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"The Big Catch",author:"Jon B. Arnackle"}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"VCP-1204",author:"VCP Foundation"}}}]
 
 #   MASON
 
@@ -109,9 +125,11 @@ function #merchantpug:powers_to_remove
 
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsCartographer
+scoreboard players reset @s merchantIsCleric
 scoreboard players reset @s merchantIsLeatherworker
 scoreboard players reset @s merchantIsLibrarian
 scoreboard players reset @s merchantIsMason
 scoreboard players reset @s merchantIsFisherman
+scoreboard players reset @s merchantIsFletcher
 scoreboard players reset @s merchantIsShepherd
 scoreboard players reset @s merchantIsSmith

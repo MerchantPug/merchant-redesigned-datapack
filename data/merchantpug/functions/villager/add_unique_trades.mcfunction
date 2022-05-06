@@ -1,8 +1,10 @@
 #  Store objectives for profession checks
 scoreboard objectives add merchantIsButcher dummy
 scoreboard objectives add merchantIsCartographer dummy
+scoreboard objectives add merchantIsCleric dummy
 scoreboard objectives add merchantIsFarmer dummy
 scoreboard objectives add merchantIsFisherman dummy
+scoreboard objectives add merchantIsFletcher dummy
 scoreboard objectives add merchantIsLeatherworker dummy
 scoreboard objectives add merchantIsLibrarian dummy
 scoreboard objectives add merchantIsMason dummy
@@ -54,6 +56,40 @@ execute if score @s merchantIsCartographer matches 1 run scoreboard players rese
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #temp foundNothing
 execute if score @s merchantIsCartographer matches 1 run scoreboard players reset #all foundNothing
 
+#   CLERIC
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:cleric"}}] run scoreboard players set @s merchantIsCleric 1
+
+
+#   Run loot table for random trade if the 'merchantRandomisedTradeId' score of the villager is 0
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 0 store result score @s merchantRandomisedTradeId run loot spawn ~ ~ ~ loot merchantpug:random/cleric_rng
+
+#   Emerald Rune (Random Trade 1)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Emerald Rune","color":"aqua","italic":false}'},CustomModelData:416515,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 1 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416515}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   Flame Rune (Random Trade 2)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 2 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Flame Rune","color":"aqua","italic":false}'},CustomModelData:416516,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 2 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416516}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   Frost Rune (Random Trade 3)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 3 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Frost Rune","color":"aqua","italic":false}'},CustomModelData:416517,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 3 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416517}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   Draconic Rune (Random Trade 3)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 4 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Draconic Rune","color":"aqua","italic":false}'},CustomModelData:416518,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 4 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416518}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   Deep Sea Rune (Random Trade 3)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 5 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Deep Sea Rune","color":"aqua","italic":false}'},CustomModelData:416519,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 5 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416519}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   Rainbow Rune (Random Trade 3)
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 6 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:4,buy:{id:"minecraft:emerald",Count:18b},sell:{id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Rainbow Rune","color":"aqua","italic":false}'},CustomModelData:416520,Enchantments:[{id:"null:null",lvl:1s}]}},priceMultiplier:0.08f}
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 6 store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416520}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+
 #   FARMER
 
 #   Setup scoreboard
@@ -97,11 +133,16 @@ execute if score @s merchantIsLeatherworker matches 1 run execute store result e
 #   Setup scoreboard
 execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scoreboard players set @s merchantIsLibrarian 1
 
-#   Add trade to villager
-execute if score @s merchantIsLibrarian matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:1,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:written_book",Count:1b,tag:{pages:['{"text":"*sigh* I made a severe and continuous lapse in my judgement, and I don\\u2019t expect to be forgiven. I\\u2019m simply here to apologize. What I realised about my idea for the librarian was obviously unplanned. The writing you see in this book is raw; it were unfiltered. I did not know how to react or how to feel."}','{"text":"I should have never tried to make a libarian trade. I should have put Visual Studio Code down and stopped working on what I was going through. There\'s a lot of things I should have done differently but I didn\'t. And for that, from the bottom of my heart, I am sorry."}','{"text":"I want to apologize to the player. I want to apologize to anyone who has seen the datapack. I want to apologize to anyone who has been affected or touched by librarians, or villagers, or book trades. For my fans who are defending my actions,"}','{"text":"please don\'t. I don\\u2019t deserve to be defended. The goal with my content is always to entertain; to push the boundaries, to be all-inclusive. In the world I live in, I share almost everything I do. The intent is never to be lazy, hesitant, or to procrastinate."}','{"text":"Like I said I made a huge mistake. I don\\u2019t expect to be forgiven, I\\u2019m just here to apologize. I\'m ashamed of myself. I\\u2019m disappointed in myself. And I promise to be better. I will be better. Thank you."}'],title:"So Sorry.",author:MerchantPug}}}
+#   Run loot table for random trade if the 'merchantRandomisedTradeId' score of the villager is 0
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 0 store result score @s merchantRandomisedTradeId run loot spawn ~ ~ ~ loot merchantpug:random/librarian_rng
 
-#   Add stored uses of trade to villager
-execute if score @s merchantIsLibrarian matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{pages:['{"text":"*sigh* I made a severe and continuous lapse in my judgement, and I don\\u2019t expect to be forgiven. I\\u2019m simply here to apologize. What I realised about my idea for the librarian was obviously unplanned. The writing you see in this book is raw; it were unfiltered. I did not know how to react or how to feel."}','{"text":"I should have never tried to make a libarian trade. I should have put Visual Studio Code down and stopped working on what I was going through. There\'s a lot of things I should have done differently but I didn\'t. And for that, from the bottom of my heart, I am sorry."}','{"text":"I want to apologize to the player. I want to apologize to anyone who has seen the datapack. I want to apologize to anyone who has been affected or touched by librarians, or villagers, or book trades. For my fans who are defending my actions,"}','{"text":"please don\'t. I don\\u2019t deserve to be defended. The goal with my content is always to entertain; to push the boundaries, to be all-inclusive. In the world I live in, I share almost everything I do. The intent is never to be lazy, hesitant, or to procrastinate."}','{"text":"Like I said I made a huge mistake. I don\\u2019t expect to be forgiven, I\\u2019m just here to apologize. I\'m ashamed of myself. I\\u2019m disappointed in myself. And I promise to be better. I will be better. Thank you."}'],title:"So Sorry.",author:MerchantPug}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+#   The Big Catch (Random Trade 1)
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 1 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:3,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:written_book",Count:1b,tag:{pages:['{"text":"Happy fishin\' anglers! Today we\'re coverin a new alternative to fishin\', and we ain\'t talkin buckets.\\n\\nThat\'s right, get ready to expand your tackle box with the newest addition of burley! This here bait is meant for those lazy fishers out there."}','{"text":"Just throw some into some water, and watch as fish literally leap out just to eat some of this stuff.\\n\\nJust make sure you have a net ready to scoop them up.\\n\\nBe sure to stay subscribed to our services,"}','{"text":"as next week\'s story covers how the legendary fishermen wrestled a 7ft tall lobster and won."}'],title:"The Big Catch",author:"Jon B. Arnackle"}}}
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"The Big Catch",author:"Jon B. Arnackle"}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
+
+#   VCP-1204 (Random Trade 2)
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 run data modify entity @s Offers.Recipes append value {rewardExp:1b,maxUses:3,buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:written_book",Count:1b,tag:{pages:['["",{"text":"Item #:","bold":true},{"text":" VCP 1204\\n\\n","color":"reset"},{"text":"Object Class:","bold":true},{"text":" Euclid\\n\\n","color":"reset"},{"text":"Special Containment Procedures:","bold":true},{"text":" Artifact is to be held by a Shepherd personnel and given to nobody else.\\n\\nAny shepherd that is to give up the object","color":"reset"}]','["",{"text":"for some emeralds is to become V-Class personnel, the buyer must be brought in for questioning and have the item confiscated from them.\\n\\n"},{"text":"Description: ","bold":true},{"text":"VCP-1204 is a set of shears, coated in a golden substance. It is able to shear anything that","color":"reset"}]','{"text":"it touches, seemingly leaving it unharmed. \\n\\nThe object creates an instance of VCP-1204-2 whenever it shears something, what this instance is depends on what it shears. Anything that has recently been sheared becomes an instance of VCP-1204-3"}','{"text":"temporarily, which makes them emit a magical yellow essence and unable to be effected by the shears."}'],title:"VCP-1204",author:"VCP Foundation"}}}
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"VCP-1204",author:"VCP Foundation"}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 
 #   MASON
@@ -137,13 +178,11 @@ execute if score @s merchantIsShepherd matches 1 run data modify entity @s Offer
 execute if score @s merchantIsShepherd matches 1 run execute store result entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}}].uses int 1 run scoreboard players get @s merchantTraderTradeUses
 
 #   Setup durability text
-
 #  Set a sign's text for use with the tag.display.Lore NBT
 execute if score @s merchantIsShepherd matches 1 if score goldenShearsDurability merchantConfig matches ..0 run scoreboard players set goldenShearsDurability merchantConfig 1
 execute if score @s merchantIsShepherd matches 1 run data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Durability: ","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false},{"text":"/","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false}]'
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
 execute if score @s merchantIsShepherd matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}}].sell.tag.display.Lore append from block -30000000 -64 1603 Text1
-
 
 
 #   SMITHS (ARMORER/TOOLSMITH/WEAPONSMITH)
@@ -165,9 +204,11 @@ tag @s add merchant.villager_modified
 
 #   Reset profession detection scoreboards
 scoreboard players reset @s merchantIsCartographer
-scoreboard players reset @s merchantIsFisherman
+scoreboard players reset @s merchantIsCleric
 scoreboard players reset @s merchantIsLeatherworker
 scoreboard players reset @s merchantIsLibrarian
 scoreboard players reset @s merchantIsMason
+scoreboard players reset @s merchantIsFisherman
+scoreboard players reset @s merchantIsFletcher
 scoreboard players reset @s merchantIsShepherd
 scoreboard players reset @s merchantIsSmith

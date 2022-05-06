@@ -1,1 +1,0 @@
-execute if score on_modify ioi-pi matches 1 if entity @s[tag = merchant.apply_emerald_rune] run function merchantpug:rune/on_modify/apply_emerald_rune

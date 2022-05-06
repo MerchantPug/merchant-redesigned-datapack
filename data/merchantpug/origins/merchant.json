@@ -9,7 +9,7 @@
 		"item": "minecraft:knowledge_book",
 		"tag": "{CustomModelData:231246}"
 	},
-	"order": 10,
+	"order": 14,
 	"impact": 0,
 	"name": "Merchant",
 	"description": "Always looking for an additional emerald, Merchants are proficient traders."

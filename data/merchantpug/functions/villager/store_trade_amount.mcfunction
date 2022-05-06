@@ -14,11 +14,23 @@ execute if score @s merchantIsButcher matches 1 if score @s merchantTraderXp mat
 #   Setup scoreboard
 execute as @s[nbt={VillagerData:{profession:"minecraft:cartographer"}}] run scoreboard players set @s merchantIsCartographer 1
 
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 1 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Jungle Traveler Map"}'}}}}].uses
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 2 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}}].uses
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}].uses
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}].uses
-execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 5 store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Jungle Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 2 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}].uses
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 5 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}}].uses
+
+
+#   CLERIC
+execute as @s[nbt={VillagerData:{profession:"minecraft:cleric"}}] run scoreboard players set @s merchantIsCleric 1
+
+#   Store additional trade amount in villager scoreboard
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416515}}}].uses
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 2 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416516}}}].uses
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 3 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416517}}}].uses
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 4 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416518}}}].uses
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 5 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416519}}}].uses
+execute if score @s merchantIsCleric matches 1 if score @s merchantRandomisedTradeId matches 6 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:416520}}}].uses
 
 
 #   LEATHERWORKER
@@ -33,8 +45,8 @@ execute if score @s merchantIsLeatherworker matches 1 if score @s merchantTrader
 #   LIBRARIAN
 execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scoreboard players set @s merchantIsLibrarian 1
 
-execute if score @s merchantIsLibrarian matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"So Sorry.",author:MerchantPug}}}].uses
-
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 1 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"The Big Catch",author:"Jon B. Arnackle"}}}].uses
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 if score @s merchantTraderXp matches 1.. store result score @s merchantTraderTradeUses run data get entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"VCP-1204",author:"VCP Foundation"}}}].uses
 
 #   FARMER
 

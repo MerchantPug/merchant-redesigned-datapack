@@ -6,6 +6,12 @@
         "merchantpug:emerald_pouch/emerald_block/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/empty/check_empty_pouch",
         "merchantpug:emerald_pouch/check_init",
-        "merchantpug:rune/check_emerald_rune"
+        "merchantpug:rune/check/check_emerald_rune",
+        "merchantpug:rune/check/check_fire_rune",
+        "merchantpug:rune/check/check_frost_rune",
+        "merchantpug:rune/check/check_draconic_rune",
+        "merchantpug:rune/check/check_deep_sea_rune",
+        "merchantpug:rune/check/check_rainbow_rune",
+        "merchantpug:rune/check/check_rune_essence"
     ]
 }
