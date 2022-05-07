@@ -159,6 +159,86 @@
                                 "type": "origins:target_condition",
                                 "condition": {
                                     "type": "origins:in_tag",
+                                    "tag": "merchantpug:bone_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/bone_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:cat"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/cat"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:creeper"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/creeper"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:drowned"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/drowned"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:ender_pearl_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ender_pearl_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
                                     "tag": "merchantpug:fish"
                                 }
                             },
@@ -167,6 +247,102 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/fish"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ghast"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ghast"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:glow_squid"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/glow_squid"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:goat"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/goat"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:guardians"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/guardians"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:husk"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/husk"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:iron_golem"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/iron_golem"
                                 }
                             }
                         },
@@ -183,6 +359,445 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/leather_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:magma_cube"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/magma_cube"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:mooshroom"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:nbt",
+                                        "nbt": "{Type:\"brown\"}"
+                                    },
+                                    "if_action": {
+                                        "type": "origins:execute_command",
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/mooshroom/brown_mooshroom"
+                                    },
+                                    "else_action": {
+                                        "type": "origins:execute_command",
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/mooshroom/red_mooshroom"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ocelot"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ocelot"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:panda"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/panda"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:phantom"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/phantom"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:polar_bear"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/polar_bear"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:porkchop_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/porkchop_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:rabbit"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/rabbit"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ravager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ravager"
+                                        },
+                                        {
+                                            "type": "origins:passenger_action",
+                                            "action": {
+                                                "type": "origins:dismount"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:sheep"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:if_else_list",
+                                    "actions": [
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:0b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/white_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:1b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/orange_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:2b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/magenta_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:3b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/light_blue_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:4b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/yellow_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:5b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/lime_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:6b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/pink_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:7b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/gray_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:8b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/light_gray_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:9b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/cyan_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:10b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/purple_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:11b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/blue_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:12b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/brown_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:13b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/green_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:14b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/red_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:15b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/black_sheep"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:shulker"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/shulker"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:silverfish"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/silverfish"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:slime"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/slime"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:snow_golem"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/snow_golem"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:squid"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/squid"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:string_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/string_droppers"
                                 }
                             }
                         },
@@ -258,14 +873,79 @@
                                 "type": "origins:target_condition",
                                 "condition": {
                                     "type": "origins:entity_type",
-                                    "entity_type": "minecraft:silverfish"
+                                    "entity_type": "minecraft:turtle"
                                 }
                             },
                             "action": {
                                 "type": "origins:target_action",
                                 "action": {
                                     "type": "origins:execute_command",
-                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/silverfish"
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/turtle"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:villager_illager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/villager_illager"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:witch"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/witch"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:wither_skeleton"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/wither_skeleton"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zoglin"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zoglin"
                                 }
                             }
                         },
@@ -282,6 +962,38 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombie"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zombie_villager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombie_villager"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zombified_piglin"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombified_piglin"
                                 }
                             }
                         }
@@ -460,6 +1172,86 @@
                                 "type": "origins:target_condition",
                                 "condition": {
                                     "type": "origins:in_tag",
+                                    "tag": "merchantpug:bone_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/bone_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:cat"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/cat"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:creeper"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/creeper"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:drowned"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/drowned"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:ender_pearl_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ender_pearl_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
                                     "tag": "merchantpug:fish"
                                 }
                             },
@@ -468,6 +1260,102 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/fish"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ghast"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ghast"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:glow_squid"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/glow_squid"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:goat"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/goat"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:guardians"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/guardians"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:husk"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/husk"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:iron_golem"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/iron_golem"
                                 }
                             }
                         },
@@ -492,6 +1380,365 @@
                                 "type": "origins:target_condition",
                                 "condition": {
                                     "type": "origins:entity_type",
+                                    "entity_type": "minecraft:magma_cube"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/magma_cube"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:mooshroom"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:nbt",
+                                        "nbt": "{Type:\"brown\"}"
+                                    },
+                                    "if_action": {
+                                        "type": "origins:execute_command",
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/mooshroom/brown_mooshroom"
+                                    },
+                                    "else_action": {
+                                        "type": "origins:execute_command",
+                                        "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/mooshroom/red_mooshroom"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ocelot"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ocelot"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:panda"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/panda"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:phantom"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/phantom"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:polar_bear"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/polar_bear"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:porkchop_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/porkchop_droppers"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:rabbit"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/rabbit"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:ravager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/ravager"
+                                        },
+                                        {
+                                            "type": "origins:passenger_action",
+                                            "action": {
+                                                "type": "origins:dismount"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:sheep"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:if_else_list",
+                                    "actions": [
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:0b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/white_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:1b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/orange_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:2b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/magenta_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:3b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/light_blue_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:4b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/yellow_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:5b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/lime_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:6b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/pink_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:7b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/gray_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:8b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/light_gray_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:9b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/cyan_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:10b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/purple_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:11b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/blue_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:12b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/brown_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:13b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/green_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:14b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/red_sheep"
+                                            }
+                                        },
+                                        {
+                                            "condition": {
+                                                "type": "origins:nbt",
+                                                "nbt": "{Color:15b}"
+                                            },
+                                            "action": {
+                                                "type": "origins:execute_command",
+                                                "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/sheep/black_sheep"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:shulker"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/shulker"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
                                     "entity_type": "minecraft:silverfish"
                                 }
                             },
@@ -500,6 +1747,70 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/silverfish"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:slime"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/slime"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:snow_golem"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/snow_golem"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:squid"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/squid"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:string_droppers"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/string_droppers"
                                 }
                             }
                         },
@@ -517,15 +1828,17 @@
                                     "type": "origins:and",
                                     "actions": [
                                         {
-                                            "type": "origins:execute_command",
-                                            "command": "execute at @s playsound minecraft:block.lodestone.break neutral @a ~ ~ ~ 0.5"
+                                            "type": "origins:play_sound",
+                                            "sound": "minecraft:block.lodestone.break",
+                                            "pitch": 0.5
                                         },
                                         {
                                             "type": "origins:delay",
                                             "ticks": 2,
                                             "action": {
-                                                "type": "origins:execute_command",
-                                                "command": "execute at @s playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 0.6"
+                                                "type": "origins:play_sound",
+                                                "sound": "minecraft:entity.item.pickup",
+                                                "pitch": 0.5
                                             }
                                         },
                                         {
@@ -539,7 +1852,7 @@
                                                 "type": "origins:target_action",
                                                 "action": {
                                                     "type": "origins:add_velocity",
-                                                    "y": 0.2,
+                                                    "y": 0.3,
                                                     "space": "world"
                                                 }
                                             },
@@ -573,6 +1886,87 @@
                                 "type": "origins:target_condition",
                                 "condition": {
                                     "type": "origins:entity_type",
+                                    "entity_type": "minecraft:turtle"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/turtle"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "merchantpug:villager_illager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/villager_illager"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:witch"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/witch"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:wither_skeleton"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/wither_skeleton"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zoglin"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zoglin"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
                                     "entity_type": "minecraft:zombie"
                                 }
                             },
@@ -581,6 +1975,38 @@
                                 "action": {
                                     "type": "origins:execute_command",
                                     "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombie"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zombie_villager"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombie_villager"
+                                }
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:zombified_piglin"
+                                }
+                            },
+                            "action": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "loot spawn ~ ~ ~ loot merchantpug:gameplay/golden_shears/zombified_piglin"
                                 }
                             }
                         }
