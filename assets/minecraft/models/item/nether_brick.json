@@ -24,6 +24,12 @@
         },
         {
             "predicate": {
+                "custom_model_data": 415123
+            },
+            "model": "merchantpug:item/item_box"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 417651
             },
             "model": "merchantpug:item/burley"
