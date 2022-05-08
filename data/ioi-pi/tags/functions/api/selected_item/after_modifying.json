@@ -1,9 +1,0 @@
-{
-    "values": [
-        "merchantpug:condiments/glow_salt/check_glow_salt",
-        "merchantpug:condiments/parrot_macadamias/check_parrot_macadamias",
-        "merchantpug:emerald_pouch/empty/check_empty_pouch",
-        "merchantpug:emerald_pouch/emerald_block/fill/check_fill_pouch",
-        "merchantpug:gravel_brush/check_gravel_brush"
-    ]
-}

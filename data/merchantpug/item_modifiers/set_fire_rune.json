@@ -1,6 +1,0 @@
-[
-    {
-        "function": "set_nbt",
-        "tag": "{display:{Name:'{\"text\":\"Flame Rune\",\"color\":\"aqua\",\"italic\":false}'},CustomModelData:416516,Enchantments:[{id:\"null:null\",lvl:1s}]}"
-    }
-]

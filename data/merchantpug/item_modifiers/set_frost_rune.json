@@ -1,6 +1,0 @@
-[
-    {
-        "function": "set_nbt",
-        "tag": "{display:{Name:'{\"text\":\"Frost Rune\",\"color\":\"aqua\",\"italic\":false}'},CustomModelData:416517,Enchantments:[{id:\"null:null\",lvl:1s}]}"
-    }
-]
