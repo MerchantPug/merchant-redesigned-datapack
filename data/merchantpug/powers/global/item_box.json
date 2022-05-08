@@ -1,0 +1,121 @@
+{
+    "type": "origins:multiple",
+    "item_on_item": {
+        "type": "origins:item_on_item",
+        "using_item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:air"
+            }
+        },
+        "on_item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:nether_brick"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{CustomModelData:415123}"
+                }
+            ]
+        },
+        "on_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "entity_action": { 
+            "type": "origins:execute_command",
+            "command": "function merchantpug:item_box/give_item_box"
+        }
+    },  
+    "use_offhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "offhand",
+                    "action": {
+                        "type": "origins:consume"
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function merchantpug:item_box/give_item_box"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:nether_brick"
+                        }
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:415123}"
+                    }
+                ]
+            }
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+        "cooldown": 5
+    },
+    "use_mainhand": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume"
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function merchantpug:item_box/give_item_box"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:nether_brick"
+                        }
+                    },
+                    {
+                        "type": "origins:nbt",
+                        "nbt": "{CustomModelData:415123}"
+                    }
+                ]
+            }
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        },
+        "cooldown": 5
+    }
+}

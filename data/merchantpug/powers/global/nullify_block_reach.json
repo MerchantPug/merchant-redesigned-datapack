@@ -5,8 +5,8 @@
         "modifier": {
             "attribute": "reach-entity-attributes:reach",
             "name": "Nullified block reach",
-            "operation": "addition",
-            "value": -100.0
+            "operation": "multiply_total",
+            "value": -1.0
         },
         "condition": {
             "type": "origins:or",
@@ -37,6 +37,10 @@
                                     {   
                                         "type": "origins:nbt",
                                         "nbt": "{CustomModelData:231250}"
+                                    },
+                                    {   
+                                        "type": "origins:nbt",
+                                        "nbt": "{CustomModelData:415123}"
                                     }
                                 ]
                             }
@@ -69,6 +73,10 @@
                                     {   
                                         "type": "origins:nbt",
                                         "nbt": "{CustomModelData:231250}"
+                                    },
+                                    {   
+                                        "type": "origins:nbt",
+                                        "nbt": "{CustomModelData:415123}"
                                     }
                                 ]
                             }
@@ -135,6 +143,10 @@
                                     {   
                                         "type": "origins:nbt",
                                         "nbt": "{CustomModelData:231250}"
+                                    },
+                                    {   
+                                        "type": "origins:nbt",
+                                        "nbt": "{CustomModelData:415123}"
                                     }
                                 ]
                             }
@@ -167,6 +179,10 @@
                                     {   
                                         "type": "origins:nbt",
                                         "nbt": "{CustomModelData:231250}"
+                                    },
+                                    {   
+                                        "type": "origins:nbt",
+                                        "nbt": "{CustomModelData:415123}"
                                     }
                                 ]
                             }

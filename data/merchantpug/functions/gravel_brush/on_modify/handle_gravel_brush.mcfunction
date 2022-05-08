@@ -1,7 +1,6 @@
 scoreboard objectives add newDamage dummy
 scoreboard objectives add gravel dummy
 
-#   Store the count of how many items are going to be added to the `item.tag.merchant.emeralds` NBT path of the `ioi-pi:output` storage
 execute store result score #temp gravel run clear @s minecraft:gravel{ioi-pi: {selected: 1b, extra: 1b}} 0
 
 execute store result score #temp newDamage run data get storage ioi-pi:output item.tag.merchant.damage
@@ -36,7 +35,14 @@ clear @s minecraft:gravel{ioi-pi: {selected: 1b, extra: 1b}} 1
 #   Add to the '#items_to_give' score
 scoreboard players add #items_to_give gravel 1
 
-execute if score #temp gravel matches 2.. unless score #broken newDamage matches 1 run function merchantpug:gravel_brush/on_modify/handle_gravel_brush
+#   Play brush sound on last score
+execute if score #temp gravel matches 1 run playsound minecraft:entity.villager.work_cartographer player @a ~ ~ ~ 1.0 0.75
+execute unless score #temp gravel matches 1 if score #broken newDamage matches 1 run playsound minecraft:entity.villager.work_cartographer player @a ~ ~ ~ 1.0 0.75
+
+scoreboard players remove #temp gravel 1
+
+execute if score #temp gravel matches 1.. unless score #broken newDamage matches 1 run function merchantpug:gravel_brush/on_modify/handle_gravel_brush
+
 
 #   If the item breaks, set it to air
 execute if score #broken newDamage matches 1 run data modify storage ioi-pi:output item.id set value "minecraft:air"

@@ -94,6 +94,9 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:librarian"}}] run scorebo
 #   Remove actual trade from the villager
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"The Big Catch",author:"Jon B. Arnackle"}}}]
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"VCP-1204",author:"VCP Foundation"}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Quick and Delicious",author:"Ardon Mildew"}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Anvil Polish Infomercial Script",author:"Smith Co."}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Dear Jon.",author:"Liz Cleric"}}}]
 
 #   MASON
 
@@ -125,6 +128,8 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:weaponsmith"}}] run score
 #   Remove actual trade from the villager
 execute if score @s merchantIsSmith matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:156655}}}]
 
+#   WANDERING TRADER
+execute as @s[type=wandering_trader] run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:415123}}}]
 
 #   Remove tag that marks it as modified
 tag @s remove merchant.villager_modified

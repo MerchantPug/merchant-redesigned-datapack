@@ -4,6 +4,7 @@
 		"merchantpug:global/condiments/parrot_macadamias_handler",
 		"merchantpug:global/disable_pouch_crafting",
         "merchantpug:global/emerald_pouch/emerald_pouch_handler",
+		"merchantpug:global/item_box",
 		"merchantpug:global/runes/apply/add_emerald_rune",
 		"merchantpug:global/runes/apply/add_fire_rune",
 		"merchantpug:global/runes/apply/add_frost_rune",
@@ -14,12 +15,12 @@
 		"merchantpug:global/runes/apply/use_rune_essence",
         "merchantpug:global/golden_shears",
         "merchantpug:global/gravel_brush",
+		"merchantpug:global/nullify_block_reach",
         "merchantpug:global/prevent_unique_item_use",
 		"merchantpug:global/repair_anvil_with_polish",
 		"merchantpug:global/terracotta_bag/warm_terracotta_bag_handler",
 		"merchantpug:global/terracotta_bag/cool_terracotta_bag_handler",
-		"merchantpug:global/terracotta_bag/shades_terracotta_bag_handler",
-		"merchantpug:global/terracotta_bag/nullify_block_reach"
+		"merchantpug:global/terracotta_bag/shades_terracotta_bag_handler"
 	],
 	"icon": "minecraft:emerald",
 	"order": 0,
