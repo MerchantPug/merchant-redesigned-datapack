@@ -34,6 +34,7 @@ execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomi
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}}]
 execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}}]
+execute if score @s merchantIsCartographer matches 1 if score @s merchantRandomisedTradeId matches 6 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Swamp Traveler Map"}'}}}}]
 
 
 #   CLERIC
@@ -96,7 +97,8 @@ execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomised
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 2 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"VCP-1204",author:"VCP Foundation"}}}]
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 3 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Quick and Delicious",author:"Ardon Mildew"}}}]
 execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 4 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Anvil Polish Infomercial Script",author:"Smith Co."}}}]
-execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Dear Jon.",author:"Liz Cleric"}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 5 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Dear John.",author:"Liz"}}}]
+execute if score @s merchantIsLibrarian matches 1 if score @s merchantRandomisedTradeId matches 6 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:written_book",tag:{title:"Mt. Fletching Excavation Notes",author:"Village Excavationists"}}}]
 
 #   MASON
 

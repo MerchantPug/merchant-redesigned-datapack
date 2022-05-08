@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:village",
+    "config": {
+        "start_pool": "merchantpug:swamp_marker",
+        "size": 1
+    },
+    "biomes": "minecraft:swamp",
+    "adapt_noise": false,
+    "spawn_overrides": {}
+}
