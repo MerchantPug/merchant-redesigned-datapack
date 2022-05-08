@@ -13,6 +13,7 @@
 		"merchantpug:global/runes/apply/return_runes",
 		"merchantpug:global/runes/apply/use_rune_essence",
         "merchantpug:global/golden_shears",
+        "merchantpug:global/gravel_brush",
         "merchantpug:global/prevent_unique_item_use",
 		"merchantpug:global/repair_anvil_with_polish",
 		"merchantpug:global/terracotta_bag/warm_terracotta_bag_handler",

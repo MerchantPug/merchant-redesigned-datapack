@@ -14,3 +14,6 @@ execute if score emeraldPouchMax merchantConfig matches 0 run scoreboard players
 
 scoreboard players add goldenShearsDurability merchantConfig 0
 execute if score goldenShearsDurability merchantConfig matches 0 run scoreboard players set goldenShearsDurability merchantConfig 3
+
+scoreboard players add gravelBrushDurability merchantConfig 0
+execute if score gravelBrushDurability merchantConfig matches 0 run scoreboard players set gravelBrushDurability merchantConfig 12

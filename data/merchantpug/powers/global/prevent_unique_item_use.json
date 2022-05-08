@@ -18,6 +18,10 @@
                     },
                     {
                         "type": "origins:nbt",
+                        "nbt": "{CustomModelData:127156}"
+                    },
+                    {
+                        "type": "origins:nbt",
                         "nbt": "{CustomModelData:156655}"
                     },
                     {

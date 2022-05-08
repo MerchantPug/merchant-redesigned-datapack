@@ -6,6 +6,7 @@
         "merchantpug:emerald_pouch/emerald_block/fill/check_fill_pouch",
         "merchantpug:emerald_pouch/empty/check_empty_pouch",
         "merchantpug:emerald_pouch/check_init",
+        "merchantpug:gravel_brush/check_gravel_brush",
         "merchantpug:rune/check/check_emerald_rune",
         "merchantpug:rune/check/check_fire_rune",
         "merchantpug:rune/check/check_frost_rune",

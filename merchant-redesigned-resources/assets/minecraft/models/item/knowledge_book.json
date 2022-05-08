@@ -12,6 +12,12 @@
         },
         {
             "predicate": {
+                "custom_model_data": 127156
+            },
+            "model": "merchantpug:item/gravel_brush"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 156655
             },
             "model": "merchantpug:item/anvil_polish"

@@ -68,6 +68,15 @@ execute as @s[nbt={VillagerData:{profession:"minecraft:fisherman"}}] run scorebo
 execute if score @s merchantIsFisherman matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:nether_brick",tag:{CustomModelData:417651}}}]
 
 
+#   FLETCHER
+
+#   Setup scoreboard
+execute as @s[nbt={VillagerData:{profession:"minecraft:fletcher"}}] run scoreboard players set @s merchantIsFletcher 1
+
+#   Remove actual trade from the villager
+execute if score @s merchantIsFletcher matches 1 run data remove entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:127156}}}]
+
+
 #   LEATHERWORKER
 
 #   Setup scoreboard
