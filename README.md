@@ -12,7 +12,7 @@ Place the resourcepack inside your `resourcepacks` folder in the base Minecraft 
 #### Merchant | Impact -
 **Money Bags**
 You are able to craft an emerald pouch which holds emeralds.
-![](https://i.imgur.com/OoQk2Fj.png)
+<img src="https://camo.githubusercontent.com/e400ec1b35ad38e170c3c2abc30077bd9c9dfdac4de7040b7f165a3f5676b08d/68747470733a2f2f692e696d6775722e636f6d2f4f6f516b32466a2e706e67" width="256">
 
 **Charisma**
 You gain exclusive deals from each type of villager.
