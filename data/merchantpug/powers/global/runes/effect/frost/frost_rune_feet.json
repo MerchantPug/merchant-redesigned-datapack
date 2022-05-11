@@ -1,5 +1,13 @@
 {
-    "type": "origins:simple",
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:execute_command",
+        "command": "tag @s add merchant.frost_rune_feet"
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "tag @s remove merchant.frost_rune_feet"
+    },
     "name": "Frost Rune Particles",
     "description": "Emits a frost particle around yourself."
 }

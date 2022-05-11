@@ -1,5 +1,13 @@
 {
-    "type": "origins:simple",
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:execute_command",
+        "command": "tag @s add merchant.rainbow_rune_head"
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "tag @s remove merchant.rainbow_rune_head"
+    },
     "name": "Rainbow Rune Particles",
     "description": "Emits rainbow particles around yourself."
 }
