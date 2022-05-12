@@ -11,9 +11,9 @@ execute store result storage ioi-pi:output item.Count byte 1 run scoreboard play
 #   Get the sum of `#inventory_elements` and `#eyes_elements` score holders to determine if the Terracotta should be spawned or given
 execute store result score #total_elements condiment run scoreboard players add #inventory_elements condiment 1
 
-#   If the score of the `#total_elements` score holder is 37 or greater, spawn the Food items at the position of the player. Otherwise, give the Food items
-execute if score #total_elements condiment matches 37.. run loot spawn ~ ~ ~ mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+#   If the score of the `#total_elements` score holder is 41 or greater, spawn the Food items at the position of the player. Otherwise, give the Food items
+execute if score #total_elements condiment matches 41.. run loot spawn ~ ~ ~ mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
 
-execute unless score #total_elements condiment matches 37.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+execute unless score #total_elements condiment matches 41.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
 
 data remove block -30000000 -64 1602 Items

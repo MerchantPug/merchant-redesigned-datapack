@@ -18,7 +18,7 @@ execute store result score #total_elements itemBox run scoreboard players add #i
 #   Prepare the random items in the shulker box
 loot insert -30000000 -64 1602 loot merchantpug:gameplay/item_box
 
-#   If the score of the `#total_elements` score holder is 37 or greater, spawn the Terracotta items at the position of the player. Otherwise, give the Terracotta items
-execute if score #total_elements itemBox matches 37.. run loot spawn ~ ~ ~ mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+#   If the score of the `#total_elements` score holder is 41 or greater, spawn the Terracotta items at the position of the player. Otherwise, give the Terracotta items
+execute if score #total_elements itemBox matches 41.. run loot spawn ~ ~ ~ mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
 
-execute unless score #total_elements itemBox matches 37.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+execute unless score #total_elements itemBox matches 41.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
