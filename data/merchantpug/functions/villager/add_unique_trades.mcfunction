@@ -130,9 +130,9 @@ execute if score @s merchantIsFletcher matches 1 run execute store result entity
 #   Setup durability text
 #  Set a sign's text for use with the tag.display.Lore NBT
 execute if score @s merchantIsFletcher matches 1 if score gravelBrushDurability merchantConfig matches ..0 run scoreboard players set gravelBrushDurability merchantConfig 1
-execute if score @s merchantIsFletcher matches 1 run data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Durability: ","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false},{"text":"/","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false}]'
+execute if score @s merchantIsFletcher matches 1 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"Durability: ","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false},{"text":"/","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false}]'
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
-execute if score @s merchantIsFletcher matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:127156}}}].sell.tag.display.Lore append from block -30000000 -64 1603 Text1
+execute if score @s merchantIsFletcher matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:127156}}}].sell.tag.display.Lore append from block -30000000 0 1603 Text1
 
 
 #   LEATHERWORKER
@@ -215,9 +215,9 @@ execute if score @s merchantIsShepherd matches 1 run execute store result entity
 #   Setup durability text
 #  Set a sign's text for use with the tag.display.Lore NBT
 execute if score @s merchantIsShepherd matches 1 if score goldenShearsDurability merchantConfig matches ..0 run scoreboard players set goldenShearsDurability merchantConfig 1
-execute if score @s merchantIsShepherd matches 1 run data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Durability: ","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false},{"text":"/","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false}]'
+execute if score @s merchantIsShepherd matches 1 run data modify block -30000000 0 1603 Text1 set value '["",{"text":"Durability: ","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false},{"text":"/","color":"yellow","italic": false},{"score":{"name":"goldenShearsDurability","objective":"merchantConfig"},"color":"yellow","italic": false}]'
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
-execute if score @s merchantIsShepherd matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}}].sell.tag.display.Lore append from block -30000000 -64 1603 Text1
+execute if score @s merchantIsShepherd matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:knowledge_book",tag:{CustomModelData:15641}}}].sell.tag.display.Lore append from block -30000000 0 1603 Text1
 
 
 #   SMITHS (ARMORER/TOOLSMITH/WEAPONSMITH)

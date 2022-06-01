@@ -34,10 +34,10 @@ execute if data storage merchantpug:temp prev_lore[0] run function merchantpug:c
 
 data modify storage ioi-pi:output item.tag.display.Lore set from storage merchantpug:temp new_lore
 
-data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Condiment: Glow Salt","color":"blue","italic": false}]'
+data modify block -30000000 0 1603 Text1 set value '["",{"text":"Condiment: Glow Salt","color":"blue","italic": false}]'
 
 #  Append the string from the sign to the item's `tag.display.Lore` NBT
-data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 -64 1603 Text1
+data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 0 1603 Text1
 data modify storage ioi-pi:output item.tag.merchant.condiment_id set value 1b
 
 #   Cleanup

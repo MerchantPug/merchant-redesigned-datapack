@@ -29,11 +29,11 @@ execute if score @s merchantRandomisedTradeId matches 1 if score #temp foundJung
 
 #   If a jungle is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 1 unless score #not_found foundJungle matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/jungle_map
+execute if score @s merchantRandomisedTradeId matches 1 unless score #not_found foundJungle matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/jungle_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 1 unless score #not_found foundJungle matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 1 unless score #not_found foundJungle matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Jungle Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 1 unless score #not_found foundJungle matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Jungle Traveler Map"}'}}}].tag
 
 
 #   Flower Forest Biome Map (Random Trade 2)
@@ -45,11 +45,11 @@ execute if score @s merchantRandomisedTradeId matches 2 if score #temp foundFlow
 
 #   If a flower forest is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 2 unless score #not_found foundFlowerForest matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/flower_forest_map
+execute if score @s merchantRandomisedTradeId matches 2 unless score #not_found foundFlowerForest matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/flower_forest_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 2 unless score #not_found foundFlowerForest matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 2 unless score #not_found foundFlowerForest matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 2 unless score #not_found foundFlowerForest matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Flower Forest Traveler Map"}'}}}].tag
 
 
 #   Badlands Biome Map (Random Trade 3)
@@ -61,11 +61,11 @@ execute if score @s merchantRandomisedTradeId matches 3 if score #temp foundBadl
 
 #   If a badlands is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found foundBadlands matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/badlands_map
+execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found foundBadlands matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/badlands_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found foundBadlands matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found foundBadlands matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 3 unless score #not_found foundBadlands matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Badlands Traveler Map"}'}}}].tag
 
 
 #   Ice Spikes Biome Map (Random Trade 4)
@@ -77,11 +77,11 @@ execute if score @s merchantRandomisedTradeId matches 4 if score #temp foundIceS
 
 #   If an ice spikes is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/ice_spikes_map
+execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/ice_spikes_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 4 unless score #not_found foundIceSpikes matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Ice Spikes Traveler Map"}'}}}].tag
 
 
 #   Warm Ocean Biome Map (Random Trade 5)
@@ -93,11 +93,11 @@ execute if score @s merchantRandomisedTradeId matches 5 if score #temp foundWarm
 
 #   If a warm ocean is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/warm_ocean_map
+execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/warm_ocean_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 5 unless score #not_found foundWarmOcean matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Warm Ocean Traveler Map"}'}}}].tag
 
 
 #   Swamp Biome Map (Random Trade 6)
@@ -109,15 +109,15 @@ execute if score @s merchantRandomisedTradeId matches 6 if score #temp foundSwam
 
 #   If a warm ocean is found...
 #   Setup replacement map in the yellow shulker box
-execute if score @s merchantRandomisedTradeId matches 6 unless score #not_found foundSwamp matches 1 run loot insert -30000000 -64 1602 loot merchantpug:gameplay/biome_maps/swamp_map
+execute if score @s merchantRandomisedTradeId matches 6 unless score #not_found foundSwamp matches 1 run loot insert -30000000 0 1602 loot merchantpug:gameplay/biome_maps/swamp_map
 
 #   Set villager trade to replacement map
 execute if score @s merchantRandomisedTradeId matches 6 unless score #not_found foundSwamp matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:map",tag:{merchant:{map:"placeholder"}}}}].sell.id set value "minecraft:filled_map"
-execute if score @s merchantRandomisedTradeId matches 6 unless score #not_found foundSwamp matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 -64 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Swamp Traveler Map"}'}}}].tag
+execute if score @s merchantRandomisedTradeId matches 6 unless score #not_found foundSwamp matches 1 run data modify entity @s Offers.Recipes[{sell:{id:"minecraft:filled_map",tag:{merchant:{map:"placeholder"}}}}].sell.tag set from block -30000000 0 1602 Items[{id:"minecraft:filled_map",tag:{display:{Name:'{"text":"Swamp Traveler Map"}'}}}].tag
 
 
 #   Clear the shulker box
-data remove block -30000000 -64 1602 Items
+data remove block -30000000 0 1602 Items
 
 #   Set the 'foundNothing' score for #temp if a trade was not found 
 execute if score @s merchantRandomisedTradeId matches 0 run scoreboard players set #temp foundNothing 1 

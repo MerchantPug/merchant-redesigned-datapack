@@ -5,6 +5,6 @@
         }
     },
     "rewards": {
-        "function": "ioi-pi:impl/init"
+        "function": "ioi-pi:impl/first_join"
     }
 }

@@ -17,10 +17,10 @@ scoreboard players operation #display newDamage -= #temp newDamage
 data modify storage ioi-pi:output item.tag.display.Lore set value []
 
 #   Set a sign's text for use with the tag.display.Lore NBT
-data modify block -30000000 -64 1603 Text1 set value '["",{"text":"Durability: ","color":"white","italic": false},{"score":{"name":"#display","objective":"newDamage"},"color":"white","italic": false},{"text":"/","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false}]'
+data modify block -30000000 0 1603 Text1 set value '["",{"text":"Durability: ","color":"white","italic": false},{"score":{"name":"#display","objective":"newDamage"},"color":"white","italic": false},{"text":"/","color":"white","italic": false},{"score":{"name":"gravelBrushDurability","objective":"merchantConfig"},"color":"white","italic": false}]'
 
 #   Append the string from the sign to the item's `tag.display.Lore` NBT
-data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 -64 1603 Text1
+data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 0 1603 Text1
 
 #   Handle if the item breaks or not
 execute if score #temp newDamage >= gravelBrushDurability merchantConfig run scoreboard players set #broken newDamage 1

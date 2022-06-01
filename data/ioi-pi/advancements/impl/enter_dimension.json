@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "enter_dimension": {
+            "trigger": "minecraft:changed_dimension"
+        }
+    },
+    "rewards": {
+        "function": "ioi-pi:impl/enter_dimension"
+    }
+}

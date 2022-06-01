@@ -18,4 +18,4 @@ data modify storage ioi-pi:temp armor[0].Slot set value 0b
 
 
 #   Set the contents of the shulker box as the contents of the `armor` NBT path
-data modify block -30000000 -64 1602 Items set from storage ioi-pi:temp armor
+data modify block -30000000 0 1602 Items set from storage ioi-pi:temp armor

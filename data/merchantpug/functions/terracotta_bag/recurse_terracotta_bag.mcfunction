@@ -9,14 +9,14 @@ execute store result score #inventory_elements giveTerracotta if data entity @s 
 execute store result score #total_elements giveTerracotta run scoreboard players add #inventory_elements giveTerracotta 1
 
 #   Prepare the Terracotta items in the shulker box
-execute as @s[tag = merchant.terracotta_bag_warm] run loot insert -30000000 -64 1602 loot merchantpug:gameplay/terracotta_bag_warm
-execute as @s[tag = merchant.terracotta_bag_cool] run loot insert -30000000 -64 1602 loot merchantpug:gameplay/terracotta_bag_cool
-execute as @s[tag = merchant.terracotta_bag_shades] run loot insert -30000000 -64 1602 loot merchantpug:gameplay/terracotta_bag_shades
+execute as @s[tag = merchant.terracotta_bag_warm] run loot insert -30000000 0 1602 loot merchantpug:gameplay/terracotta_bag_warm
+execute as @s[tag = merchant.terracotta_bag_cool] run loot insert -30000000 0 1602 loot merchantpug:gameplay/terracotta_bag_cool
+execute as @s[tag = merchant.terracotta_bag_shades] run loot insert -30000000 0 1602 loot merchantpug:gameplay/terracotta_bag_shades
 
 #   If the score of the `#total_elements` score holder is 41 or greater, spawn the Terracotta items at the position of the player. Otherwise, give the Terracotta items
-execute if score #total_elements giveTerracotta matches 41.. run loot spawn ~ ~ ~ mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+execute if score #total_elements giveTerracotta matches 41.. run loot spawn ~ ~ ~ mine -30000000 0 1602 minecraft:air{drop_contents: 1b}
 
-execute unless score #total_elements giveTerracotta matches 41.. run loot give @s mine -30000000 -64 1602 minecraft:air{drop_contents: 1b}
+execute unless score #total_elements giveTerracotta matches 41.. run loot give @s mine -30000000 0 1602 minecraft:air{drop_contents: 1b}
 
 scoreboard players remove #recurse giveTerracotta 1
 

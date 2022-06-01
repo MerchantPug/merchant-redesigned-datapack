@@ -5,4 +5,4 @@
 #@internal
 
 
-loot replace entity @s enderchest.0 27 mine -30000000 -64 1602 minecraft:air{drop_contents:1b}
+loot replace entity @s enderchest.0 27 mine -30000000 0 1602 minecraft:air{drop_contents:1b}

@@ -44,4 +44,4 @@
 
 #>  A special shulker box used for indirectly modifying the player/entity's inventory
 #@public
-#alias vector "MinecraftPhi's yellow shulker box" -30000000 -64 1602
+#alias vector "MinecraftPhi's yellow shulker box" -30000000 0 1602
